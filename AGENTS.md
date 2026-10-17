@@ -11,6 +11,7 @@ vendor snapshot. Default engine is the AI snapshot 1.27.0: classic script global
 no ESM/LJS namespace. Read its reference before guessing API names. The separate
 1.27.2 engine snapshot is reference-only until deliberately adopted and tested.
 
+Starters read controls through input.js ([input-actions](recipes/input-actions.md)).
 Use engine math, input, collision, particles, UI and helper modules before writing
 replacements. Keep a playable goal/failure/restart loop small. coding-core supports
 pure rules/data transformations; it does not replace mutable EngineObjects.

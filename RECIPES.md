@@ -4,6 +4,7 @@
 |---|---|
 | Start a new game | [start](recipes/start.md) |
 | Movement, keyboard, mouse, touch and gamepads | [movement-and-input](recipes/movement-and-input.md) |
+| Named actions, prompts and rebinding (starter input.js) | [input-actions](recipes/input-actions.md) |
 | Collision, tile maps and platformers | [collision-and-levels](recipes/collision-and-levels.md) |
 | Play, score, lose and restart | [game-loop-and-state](recipes/game-loop-and-state.md) |
 | Title, pause, options and saved state | [menus-and-save](recipes/menus-and-save.md) |

@@ -1,6 +1,27 @@
 {
   "schema_version": 1,
   "default_engine": "LittleJS-AI bundled LittleJS 1.27.0",
+  "starters": [
+    {
+      "id": "input",
+      "path": "starters/input.js",
+      "status": "gaming-core original; unit and browser tested in both scaffolds",
+      "engine": "1.27.0",
+      "recipe": "recipes/input-actions.md"
+    },
+    {
+      "id": "emptyGame",
+      "path": "starters/emptyGame/game.js",
+      "status": "scaffold game.js; browser tested with keyboard, mouse, mocked gamepad, rebinding",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "pong",
+      "path": "starters/pong/game.js",
+      "status": "scaffold game.js; browser tested with keyboard, mouse, mocked gamepad, pause",
+      "engine": "1.27.0"
+    }
+  ],
   "examples": [
     {
       "id": "littlejs-ai:3dGame-game.js",
@@ -17,13 +38,13 @@
     {
       "id": "littlejs-ai:emptyGame-game.js",
       "path": "vendor/littlejs-ai/examples/emptyGame/game.js",
-      "status": "scaffold-browser-smoke-tested; not exhaustive",
+      "status": "upstream base of the scaffold; scaffold ships the adapted starters/ game.js",
       "engine": "1.27.0"
     },
     {
       "id": "littlejs-ai:pong-game.js",
       "path": "vendor/littlejs-ai/examples/pong/game.js",
-      "status": "scaffold-browser-smoke-tested; not exhaustive",
+      "status": "upstream base of the scaffold; scaffold ships the adapted starters/ game.js",
       "engine": "1.27.0"
     },
     {
