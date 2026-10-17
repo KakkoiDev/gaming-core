@@ -1,4 +1,4 @@
-const {chromium}=(()=>{try{return require('playwright');}catch{return require('playwright-core');}})();
+const {chromium}=(()=>{try{return require('./browser/node_modules/playwright');}catch{return require('playwright');}})();
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const {spawn,execFileSync}=require('node:child_process');
