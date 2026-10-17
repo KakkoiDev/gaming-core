@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "checkJs": false
+    },
+    "include": [
+        "./dist/littlejs.js",
+        "./examples/**/*.js",
+        "./templates/*.js"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/build"
+    ]
+}

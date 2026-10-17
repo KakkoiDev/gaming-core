@@ -1,0 +1,143 @@
+# Local example index
+
+All pinned examples remain unchanged under vendor/. The default is the LittleJS-AI
+snapshot (engine 1.27.0). The separate engine repository snapshot is 1.27.2.
+Never combine their dist files and API assumptions silently. Only copied emptyGame
+and pong are supported by our scaffolder; other examples are reference-only.
+Vite/TypeScript/ThreeJS/Box2D examples may require extra tools or assets.
+
+| Engine snapshot | Example | Status |
+|---|---|---|
+| 1.27.0 | [littlejs-ai:3dGame-game.js](../vendor/littlejs-ai/examples/3dGame/game.js) | bundled-reference; browser-unverified |
+| 1.27.0 | [littlejs-ai:box2dGame-game.js](../vendor/littlejs-ai/examples/box2dGame/game.js) | bundled-reference; browser-unverified |
+| 1.27.0 | [littlejs-ai:emptyGame-game.js](../vendor/littlejs-ai/examples/emptyGame/game.js) | bundled-reference; browser-unverified |
+| 1.27.0 | [littlejs-ai:pong-game.js](../vendor/littlejs-ai/examples/pong/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:3d-game.js](../vendor/littlejs/examples/3d/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:box2d-game.js](../vendor/littlejs/examples/box2d/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:breakout-game.js](../vendor/littlejs/examples/breakout/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:breakoutTutorial-game.js](../vendor/littlejs/examples/breakoutTutorial/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:empty-game.js](../vendor/littlejs/examples/empty/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:htmlMenu-game.js](../vendor/littlejs/examples/htmlMenu/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:module-game.js](../vendor/littlejs/examples/module/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:platformer-game.js](../vendor/littlejs/examples/platformer/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:puzzle-game.js](../vendor/littlejs/examples/puzzle/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-animation.js](../vendor/littlejs/examples/shorts/animation.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-audioEffects.js](../vendor/littlejs/examples/shorts/audioEffects.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-ballTrackGame.js](../vendor/littlejs/examples/shorts/ballTrackGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-blending.js](../vendor/littlejs/examples/shorts/blending.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-box2d.js](../vendor/littlejs/examples/shorts/box2d.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-box2dCar.js](../vendor/littlejs/examples/shorts/box2dCar.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-box2dPool.js](../vendor/littlejs/examples/shorts/box2dPool.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-box2dTileLayer.js](../vendor/littlejs/examples/shorts/box2dTileLayer.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-cameraDrag.js](../vendor/littlejs/examples/shorts/cameraDrag.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-clock.js](../vendor/littlejs/examples/shorts/clock.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-colors.js](../vendor/littlejs/examples/shorts/colors.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-crescent.js](../vendor/littlejs/examples/shorts/crescent.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-customEditor.js](../vendor/littlejs/examples/shorts/customEditor.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-debugDraw.js](../vendor/littlejs/examples/shorts/debugDraw.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-empty.js](../vendor/littlejs/examples/shorts/empty.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-flappyGame.js](../vendor/littlejs/examples/shorts/flappyGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-grappleGame.js](../vendor/littlejs/examples/shorts/grappleGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-helloWorld.js](../vendor/littlejs/examples/shorts/helloWorld.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-hillGlideGame.js](../vendor/littlejs/examples/shorts/hillGlideGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-imageFont.js](../vendor/littlejs/examples/shorts/imageFont.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-input.js](../vendor/littlejs/examples/shorts/input.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-landerGame.js](../vendor/littlejs/examples/shorts/landerGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-levelEditor.js](../vendor/littlejs/examples/shorts/levelEditor.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-lightShadows.js](../vendor/littlejs/examples/shorts/lightShadows.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-lightSystem.js](../vendor/littlejs/examples/shorts/lightSystem.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-lowRes.js](../vendor/littlejs/examples/shorts/lowRes.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-maze.js](../vendor/littlejs/examples/shorts/maze.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-medals.js](../vendor/littlejs/examples/shorts/medals.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-music.js](../vendor/littlejs/examples/shorts/music.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-musicPlayer.js](../vendor/littlejs/examples/shorts/musicPlayer.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-nineSlice.js](../vendor/littlejs/examples/shorts/nineSlice.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-noise.js](../vendor/littlejs/examples/shorts/noise.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-objectCollect.js](../vendor/littlejs/examples/shorts/objectCollect.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-objectRaycast.js](../vendor/littlejs/examples/shorts/objectRaycast.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-parallax.js](../vendor/littlejs/examples/shorts/parallax.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-parentChild.js](../vendor/littlejs/examples/shorts/parentChild.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-particleEffects.js](../vendor/littlejs/examples/shorts/particleEffects.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-particleOptions.js](../vendor/littlejs/examples/shorts/particleOptions.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-particles.js](../vendor/littlejs/examples/shorts/particles.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-pathFinder.js](../vendor/littlejs/examples/shorts/pathFinder.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-physics.js](../vendor/littlejs/examples/shorts/physics.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-piano.js](../vendor/littlejs/examples/shorts/piano.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-platformPhysics.js](../vendor/littlejs/examples/shorts/platformPhysics.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-platformer.js](../vendor/littlejs/examples/shorts/platformer.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-pongGame.js](../vendor/littlejs/examples/shorts/pongGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-postEffects.js](../vendor/littlejs/examples/shorts/postEffects.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-postProcess.js](../vendor/littlejs/examples/shorts/postProcess.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-random.js](../vendor/littlejs/examples/shorts/random.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-raycastingGame.js](../vendor/littlejs/examples/shorts/raycastingGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dAmbientOcclusion.js](../vendor/littlejs/examples/shorts/render3dAmbientOcclusion.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dBasics.js](../vendor/littlejs/examples/shorts/render3dBasics.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dBillboards.js](../vendor/littlejs/examples/shorts/render3dBillboards.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dCollision.js](../vendor/littlejs/examples/shorts/render3dCollision.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dDodgeGame.js](../vendor/littlejs/examples/shorts/render3dDodgeGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dDraw.js](../vendor/littlejs/examples/shorts/render3dDraw.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dFirstPerson.js](../vendor/littlejs/examples/shorts/render3dFirstPerson.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dFocusBlur.js](../vendor/littlejs/examples/shorts/render3dFocusBlur.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dGlow.js](../vendor/littlejs/examples/shorts/render3dGlow.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dHeightMap.js](../vendor/littlejs/examples/shorts/render3dHeightMap.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dInstancing.js](../vendor/littlejs/examples/shorts/render3dInstancing.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dLayers.js](../vendor/littlejs/examples/shorts/render3dLayers.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dLensFlare.js](../vendor/littlejs/examples/shorts/render3dLensFlare.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dLevelEditor.js](../vendor/littlejs/examples/shorts/render3dLevelEditor.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dLights.js](../vendor/littlejs/examples/shorts/render3dLights.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dMaterials.js](../vendor/littlejs/examples/shorts/render3dMaterials.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dMesh.js](../vendor/littlejs/examples/shorts/render3dMesh.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dMeshOps.js](../vendor/littlejs/examples/shorts/render3dMeshOps.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dParticles.js](../vendor/littlejs/examples/shorts/render3dParticles.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dPrefab.js](../vendor/littlejs/examples/shorts/render3dPrefab.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dPuzzleGame.js](../vendor/littlejs/examples/shorts/render3dPuzzleGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dRacingGame.js](../vendor/littlejs/examples/shorts/render3dRacingGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dReflections.js](../vendor/littlejs/examples/shorts/render3dReflections.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dShaders.js](../vendor/littlejs/examples/shorts/render3dShaders.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dShapes.js](../vendor/littlejs/examples/shorts/render3dShapes.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dSync2D.js](../vendor/littlejs/examples/shorts/render3dSync2D.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dText.js](../vendor/littlejs/examples/shorts/render3dText.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dTextures.js](../vendor/littlejs/examples/shorts/render3dTextures.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dTrails.js](../vendor/littlejs/examples/shorts/render3dTrails.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dVoxels.js](../vendor/littlejs/examples/shorts/render3dVoxels.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-render3dWater.js](../vendor/littlejs/examples/shorts/render3dWater.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-save.js](../vendor/littlejs/examples/shorts/save.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-scenes.js](../vendor/littlejs/examples/shorts/scenes.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-sequencer.js](../vendor/littlejs/examples/shorts/sequencer.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-shader.js](../vendor/littlejs/examples/shorts/shader.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-shaders.js](../vendor/littlejs/examples/shorts/shaders.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-shapes.js](../vendor/littlejs/examples/shorts/shapes.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-slidingPuzzle.js](../vendor/littlejs/examples/shorts/slidingPuzzle.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-sound.js](../vendor/littlejs/examples/shorts/sound.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-spaceGame.js](../vendor/littlejs/examples/shorts/spaceGame.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-speak.js](../vendor/littlejs/examples/shorts/speak.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-spriteAtlas.js](../vendor/littlejs/examples/shorts/spriteAtlas.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-starfield.js](../vendor/littlejs/examples/shorts/starfield.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-text.js](../vendor/littlejs/examples/shorts/text.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-texture.js](../vendor/littlejs/examples/shorts/texture.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-textureAtlas.js](../vendor/littlejs/examples/shorts/textureAtlas.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-textureSheet.js](../vendor/littlejs/examples/shorts/textureSheet.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-textureWrapped.js](../vendor/littlejs/examples/shorts/textureWrapped.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-tileLayer.js](../vendor/littlejs/examples/shorts/tileLayer.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-tileRaycast.js](../vendor/littlejs/examples/shorts/tileRaycast.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-tiltedView.js](../vendor/littlejs/examples/shorts/tiltedView.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-timers.js](../vendor/littlejs/examples/shorts/timers.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-topDown.js](../vendor/littlejs/examples/shorts/topDown.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-tweakables.js](../vendor/littlejs/examples/shorts/tweakables.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-tween.js](../vendor/littlejs/examples/shorts/tween.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-tweenAdvanced.js](../vendor/littlejs/examples/shorts/tweenAdvanced.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-uiLayout.js](../vendor/littlejs/examples/shorts/uiLayout.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-uiSlice.js](../vendor/littlejs/examples/shorts/uiSlice.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-uiSystem.js](../vendor/littlejs/examples/shorts/uiSystem.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-vectors.js](../vendor/littlejs/examples/shorts/vectors.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-vibrate.js](../vendor/littlejs/examples/shorts/vibrate.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:shorts-videoPlayer.js](../vendor/littlejs/examples/shorts/videoPlayer.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:starter-game.js](../vendor/littlejs/examples/starter/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:threejs-game.js](../vendor/littlejs/examples/threejs/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:typescript-game.js](../vendor/littlejs/examples/typescript/game.js) | bundled-reference; browser-unverified |
+| 1.27.2 | [littlejs:uiSystem-game.js](../vendor/littlejs/examples/uiSystem/game.js) | bundled-reference; browser-unverified |
+
+The copied `emptyGame` and `pong` starters passed offline Chromium smoke checks:
+canvas startup, mouse paddle movement, serve and score/reset. Mobile viewport
+layout was checked. Other bundled examples remain reference-only; audio, touch
+controls and optional plugins have not been exhaustively tested.

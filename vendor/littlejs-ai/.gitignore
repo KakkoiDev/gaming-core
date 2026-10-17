@@ -1,0 +1,25 @@
+# node files
+node_modules
+
+# game build artifacts
+examples/*/build/
+examples/*/*.zip
+
+# local files
+local/
+temp/
+docs/
+.github/*
+!.github/dependabot.yml
+.vscode/
+
+# personal Claude Code settings (machine-specific)
+.claude/settings.json
+.claude/settings.local.json
+
+# playwright-mcp scratch dir
+.playwright-mcp/
+
+# debug screenshots / data dumps at repo root
+/*.png
+/*_data.txt

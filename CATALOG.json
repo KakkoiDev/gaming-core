@@ -1,0 +1,888 @@
+{
+  "schema_version": 1,
+  "default_engine": "LittleJS-AI bundled LittleJS 1.27.0",
+  "examples": [
+    {
+      "id": "littlejs-ai:3dGame-game.js",
+      "path": "vendor/littlejs-ai/examples/3dGame/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "littlejs-ai:box2dGame-game.js",
+      "path": "vendor/littlejs-ai/examples/box2dGame/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "littlejs-ai:emptyGame-game.js",
+      "path": "vendor/littlejs-ai/examples/emptyGame/game.js",
+      "status": "scaffold-browser-smoke-tested; not exhaustive",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "littlejs-ai:pong-game.js",
+      "path": "vendor/littlejs-ai/examples/pong/game.js",
+      "status": "scaffold-browser-smoke-tested; not exhaustive",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "littlejs:3d-game.js",
+      "path": "vendor/littlejs/examples/3d/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:box2d-game.js",
+      "path": "vendor/littlejs/examples/box2d/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:breakout-game.js",
+      "path": "vendor/littlejs/examples/breakout/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:breakoutTutorial-game.js",
+      "path": "vendor/littlejs/examples/breakoutTutorial/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:empty-game.js",
+      "path": "vendor/littlejs/examples/empty/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:htmlMenu-game.js",
+      "path": "vendor/littlejs/examples/htmlMenu/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:module-game.js",
+      "path": "vendor/littlejs/examples/module/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:platformer-game.js",
+      "path": "vendor/littlejs/examples/platformer/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:puzzle-game.js",
+      "path": "vendor/littlejs/examples/puzzle/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-animation.js",
+      "path": "vendor/littlejs/examples/shorts/animation.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-audioEffects.js",
+      "path": "vendor/littlejs/examples/shorts/audioEffects.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-ballTrackGame.js",
+      "path": "vendor/littlejs/examples/shorts/ballTrackGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-blending.js",
+      "path": "vendor/littlejs/examples/shorts/blending.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-box2d.js",
+      "path": "vendor/littlejs/examples/shorts/box2d.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-box2dCar.js",
+      "path": "vendor/littlejs/examples/shorts/box2dCar.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-box2dPool.js",
+      "path": "vendor/littlejs/examples/shorts/box2dPool.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-box2dTileLayer.js",
+      "path": "vendor/littlejs/examples/shorts/box2dTileLayer.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-cameraDrag.js",
+      "path": "vendor/littlejs/examples/shorts/cameraDrag.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-clock.js",
+      "path": "vendor/littlejs/examples/shorts/clock.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-colors.js",
+      "path": "vendor/littlejs/examples/shorts/colors.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-crescent.js",
+      "path": "vendor/littlejs/examples/shorts/crescent.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-customEditor.js",
+      "path": "vendor/littlejs/examples/shorts/customEditor.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-debugDraw.js",
+      "path": "vendor/littlejs/examples/shorts/debugDraw.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-empty.js",
+      "path": "vendor/littlejs/examples/shorts/empty.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-flappyGame.js",
+      "path": "vendor/littlejs/examples/shorts/flappyGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-grappleGame.js",
+      "path": "vendor/littlejs/examples/shorts/grappleGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-helloWorld.js",
+      "path": "vendor/littlejs/examples/shorts/helloWorld.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-hillGlideGame.js",
+      "path": "vendor/littlejs/examples/shorts/hillGlideGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-imageFont.js",
+      "path": "vendor/littlejs/examples/shorts/imageFont.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-input.js",
+      "path": "vendor/littlejs/examples/shorts/input.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-landerGame.js",
+      "path": "vendor/littlejs/examples/shorts/landerGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-levelEditor.js",
+      "path": "vendor/littlejs/examples/shorts/levelEditor.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-lightShadows.js",
+      "path": "vendor/littlejs/examples/shorts/lightShadows.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-lightSystem.js",
+      "path": "vendor/littlejs/examples/shorts/lightSystem.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-lowRes.js",
+      "path": "vendor/littlejs/examples/shorts/lowRes.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-maze.js",
+      "path": "vendor/littlejs/examples/shorts/maze.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-medals.js",
+      "path": "vendor/littlejs/examples/shorts/medals.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-music.js",
+      "path": "vendor/littlejs/examples/shorts/music.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-musicPlayer.js",
+      "path": "vendor/littlejs/examples/shorts/musicPlayer.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-nineSlice.js",
+      "path": "vendor/littlejs/examples/shorts/nineSlice.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-noise.js",
+      "path": "vendor/littlejs/examples/shorts/noise.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-objectCollect.js",
+      "path": "vendor/littlejs/examples/shorts/objectCollect.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-objectRaycast.js",
+      "path": "vendor/littlejs/examples/shorts/objectRaycast.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-parallax.js",
+      "path": "vendor/littlejs/examples/shorts/parallax.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-parentChild.js",
+      "path": "vendor/littlejs/examples/shorts/parentChild.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-particleEffects.js",
+      "path": "vendor/littlejs/examples/shorts/particleEffects.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-particleOptions.js",
+      "path": "vendor/littlejs/examples/shorts/particleOptions.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-particles.js",
+      "path": "vendor/littlejs/examples/shorts/particles.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-pathFinder.js",
+      "path": "vendor/littlejs/examples/shorts/pathFinder.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-physics.js",
+      "path": "vendor/littlejs/examples/shorts/physics.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-piano.js",
+      "path": "vendor/littlejs/examples/shorts/piano.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-platformPhysics.js",
+      "path": "vendor/littlejs/examples/shorts/platformPhysics.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-platformer.js",
+      "path": "vendor/littlejs/examples/shorts/platformer.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-pongGame.js",
+      "path": "vendor/littlejs/examples/shorts/pongGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-postEffects.js",
+      "path": "vendor/littlejs/examples/shorts/postEffects.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-postProcess.js",
+      "path": "vendor/littlejs/examples/shorts/postProcess.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-random.js",
+      "path": "vendor/littlejs/examples/shorts/random.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-raycastingGame.js",
+      "path": "vendor/littlejs/examples/shorts/raycastingGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dAmbientOcclusion.js",
+      "path": "vendor/littlejs/examples/shorts/render3dAmbientOcclusion.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dBasics.js",
+      "path": "vendor/littlejs/examples/shorts/render3dBasics.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dBillboards.js",
+      "path": "vendor/littlejs/examples/shorts/render3dBillboards.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dCollision.js",
+      "path": "vendor/littlejs/examples/shorts/render3dCollision.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dDodgeGame.js",
+      "path": "vendor/littlejs/examples/shorts/render3dDodgeGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dDraw.js",
+      "path": "vendor/littlejs/examples/shorts/render3dDraw.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dFirstPerson.js",
+      "path": "vendor/littlejs/examples/shorts/render3dFirstPerson.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dFocusBlur.js",
+      "path": "vendor/littlejs/examples/shorts/render3dFocusBlur.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dGlow.js",
+      "path": "vendor/littlejs/examples/shorts/render3dGlow.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dHeightMap.js",
+      "path": "vendor/littlejs/examples/shorts/render3dHeightMap.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dInstancing.js",
+      "path": "vendor/littlejs/examples/shorts/render3dInstancing.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dLayers.js",
+      "path": "vendor/littlejs/examples/shorts/render3dLayers.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dLensFlare.js",
+      "path": "vendor/littlejs/examples/shorts/render3dLensFlare.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dLevelEditor.js",
+      "path": "vendor/littlejs/examples/shorts/render3dLevelEditor.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dLights.js",
+      "path": "vendor/littlejs/examples/shorts/render3dLights.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dMaterials.js",
+      "path": "vendor/littlejs/examples/shorts/render3dMaterials.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dMesh.js",
+      "path": "vendor/littlejs/examples/shorts/render3dMesh.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dMeshOps.js",
+      "path": "vendor/littlejs/examples/shorts/render3dMeshOps.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dParticles.js",
+      "path": "vendor/littlejs/examples/shorts/render3dParticles.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dPrefab.js",
+      "path": "vendor/littlejs/examples/shorts/render3dPrefab.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dPuzzleGame.js",
+      "path": "vendor/littlejs/examples/shorts/render3dPuzzleGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dRacingGame.js",
+      "path": "vendor/littlejs/examples/shorts/render3dRacingGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dReflections.js",
+      "path": "vendor/littlejs/examples/shorts/render3dReflections.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dShaders.js",
+      "path": "vendor/littlejs/examples/shorts/render3dShaders.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dShapes.js",
+      "path": "vendor/littlejs/examples/shorts/render3dShapes.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dSync2D.js",
+      "path": "vendor/littlejs/examples/shorts/render3dSync2D.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dText.js",
+      "path": "vendor/littlejs/examples/shorts/render3dText.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dTextures.js",
+      "path": "vendor/littlejs/examples/shorts/render3dTextures.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dTrails.js",
+      "path": "vendor/littlejs/examples/shorts/render3dTrails.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dVoxels.js",
+      "path": "vendor/littlejs/examples/shorts/render3dVoxels.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-render3dWater.js",
+      "path": "vendor/littlejs/examples/shorts/render3dWater.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-save.js",
+      "path": "vendor/littlejs/examples/shorts/save.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-scenes.js",
+      "path": "vendor/littlejs/examples/shorts/scenes.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-sequencer.js",
+      "path": "vendor/littlejs/examples/shorts/sequencer.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-shader.js",
+      "path": "vendor/littlejs/examples/shorts/shader.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-shaders.js",
+      "path": "vendor/littlejs/examples/shorts/shaders.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-shapes.js",
+      "path": "vendor/littlejs/examples/shorts/shapes.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-slidingPuzzle.js",
+      "path": "vendor/littlejs/examples/shorts/slidingPuzzle.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-sound.js",
+      "path": "vendor/littlejs/examples/shorts/sound.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-spaceGame.js",
+      "path": "vendor/littlejs/examples/shorts/spaceGame.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-speak.js",
+      "path": "vendor/littlejs/examples/shorts/speak.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-spriteAtlas.js",
+      "path": "vendor/littlejs/examples/shorts/spriteAtlas.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-starfield.js",
+      "path": "vendor/littlejs/examples/shorts/starfield.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-text.js",
+      "path": "vendor/littlejs/examples/shorts/text.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-texture.js",
+      "path": "vendor/littlejs/examples/shorts/texture.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-textureAtlas.js",
+      "path": "vendor/littlejs/examples/shorts/textureAtlas.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-textureSheet.js",
+      "path": "vendor/littlejs/examples/shorts/textureSheet.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-textureWrapped.js",
+      "path": "vendor/littlejs/examples/shorts/textureWrapped.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-tileLayer.js",
+      "path": "vendor/littlejs/examples/shorts/tileLayer.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-tileRaycast.js",
+      "path": "vendor/littlejs/examples/shorts/tileRaycast.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-tiltedView.js",
+      "path": "vendor/littlejs/examples/shorts/tiltedView.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-timers.js",
+      "path": "vendor/littlejs/examples/shorts/timers.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-topDown.js",
+      "path": "vendor/littlejs/examples/shorts/topDown.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-tweakables.js",
+      "path": "vendor/littlejs/examples/shorts/tweakables.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-tween.js",
+      "path": "vendor/littlejs/examples/shorts/tween.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-tweenAdvanced.js",
+      "path": "vendor/littlejs/examples/shorts/tweenAdvanced.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-uiLayout.js",
+      "path": "vendor/littlejs/examples/shorts/uiLayout.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-uiSlice.js",
+      "path": "vendor/littlejs/examples/shorts/uiSlice.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-uiSystem.js",
+      "path": "vendor/littlejs/examples/shorts/uiSystem.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-vectors.js",
+      "path": "vendor/littlejs/examples/shorts/vectors.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-vibrate.js",
+      "path": "vendor/littlejs/examples/shorts/vibrate.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:shorts-videoPlayer.js",
+      "path": "vendor/littlejs/examples/shorts/videoPlayer.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:starter-game.js",
+      "path": "vendor/littlejs/examples/starter/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:threejs-game.js",
+      "path": "vendor/littlejs/examples/threejs/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:typescript-game.js",
+      "path": "vendor/littlejs/examples/typescript/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    },
+    {
+      "id": "littlejs:uiSystem-game.js",
+      "path": "vendor/littlejs/examples/uiSystem/game.js",
+      "status": "bundled-reference; browser-unverified",
+      "engine": "1.27.2"
+    }
+  ],
+  "templates": [
+    {
+      "id": "boardGame",
+      "path": "vendor/littlejs-ai/templates/boardGame.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "box2dGame",
+      "path": "vendor/littlejs-ai/templates/box2dGame.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "cards",
+      "path": "vendor/littlejs-ai/templates/cards.js",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "cardsGame",
+      "path": "vendor/littlejs-ai/templates/cardsGame.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "defaultAtlas",
+      "path": "vendor/littlejs-ai/templates/defaultAtlas.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "engineLoader",
+      "path": "vendor/littlejs-ai/templates/engineLoader.js",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "game",
+      "path": "vendor/littlejs-ai/templates/game.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "gameAI",
+      "path": "vendor/littlejs-ai/templates/gameAI.js",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "gameFx",
+      "path": "vendor/littlejs-ai/templates/gameFx.js",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "menuDesigner",
+      "path": "vendor/littlejs-ai/templates/menuDesigner.js",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "menuGame",
+      "path": "vendor/littlejs-ai/templates/menuGame.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "menus",
+      "path": "vendor/littlejs-ai/templates/menus.js",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "textureGame",
+      "path": "vendor/littlejs-ai/templates/textureGame.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "textureGenerator",
+      "path": "vendor/littlejs-ai/templates/textureGenerator.js",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "tweakableGame",
+      "path": "vendor/littlejs-ai/templates/tweakableGame.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "uiGame",
+      "path": "vendor/littlejs-ai/templates/uiGame.html",
+      "status": "bundled-reference; unverified"
+    },
+    {
+      "id": "words",
+      "path": "vendor/littlejs-ai/templates/words.js",
+      "status": "bundled-reference; unverified"
+    }
+  ],
+  "skills": [
+    {
+      "id": "atlas-shape-art",
+      "path": "vendor/littlejs-ai/skills/atlas-shape-art/SKILL.md",
+      "status": "upstream-reference"
+    },
+    {
+      "id": "custom-level-editor",
+      "path": "vendor/littlejs-ai/skills/custom-level-editor/SKILL.md",
+      "status": "upstream-reference"
+    },
+    {
+      "id": "littlejs-api",
+      "path": "vendor/littlejs-ai/skills/littlejs-api/SKILL.md",
+      "status": "upstream-reference"
+    },
+    {
+      "id": "littlejs-conventions",
+      "path": "vendor/littlejs-ai/skills/littlejs-conventions/SKILL.md",
+      "status": "upstream-reference"
+    },
+    {
+      "id": "new-littlejs-game",
+      "path": "vendor/littlejs-ai/skills/new-littlejs-game/SKILL.md",
+      "status": "upstream-reference"
+    }
+  ]
+}

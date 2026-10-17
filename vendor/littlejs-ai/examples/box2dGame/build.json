@@ -1,0 +1,6 @@
+{
+    "title": "LittleJS Box2D Demo",
+    "name": "box2dGame",
+    "sources": ["game.js"],
+    "data": ["../../dist/box2d.wasm.js", "../../dist/box2d.wasm.wasm"]
+}

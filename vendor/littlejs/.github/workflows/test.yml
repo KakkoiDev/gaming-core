@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  push:
+  pull_request:
+
+# the job only reads the repo
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '22'
+      # the versions package-lock.json pins, so a tool updating itself can not break the build
+      - run: npm ci
+      # dist is committed only for a release, so the tests run on a build of the source as it is
+      - run: npm run build
+      - run: npm test
+      # real WebGL in the runner's own Chrome, headless with the software renderer
+      - run: npm run test:browser
