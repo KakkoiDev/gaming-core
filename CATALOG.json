@@ -5,7 +5,7 @@
     {
       "id": "input",
       "path": "starters/input.js",
-      "status": "gaming-core original; unit and browser tested in both scaffolds (keyboard, mouse, mocked gamepad, touch API, rebinding, migration)",
+      "status": "gaming-core original; unit and browser tested in both scaffolds (keyboard, mouse, mocked gamepad, position names, fixed actions, rebinding)",
       "engine": "1.27.0",
       "recipe": "recipes/input-actions.md"
     },

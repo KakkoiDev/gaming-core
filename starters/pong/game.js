@@ -43,7 +43,7 @@ function resetBall(dir)
 
 function gameInit()
 {
-    gcInput.init(); // bindings saved in localStorage['<folder name>.settings']
+    gcInput.init(); // bindings saved under '<folder name>.input', here 'pong.input'
     fitField();
     leftY = rightY = 0;
     leftScore = rightScore = 0;

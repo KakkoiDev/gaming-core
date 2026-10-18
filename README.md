@@ -17,9 +17,9 @@ python3 -B tools/check.py
 ```
 
 Open the generated index.html or serve the folder locally. Both starters play with
-keyboard, mouse, a standard gamepad and touch through a small action layer
-([input-actions](recipes/input-actions.md)): named actions in the ControlsRemap binding
-format, gamepad buttons named by position, prompts for the active device and saved rebinding. No npm install, CDN,
+keyboard, mouse and a standard gamepad through a small action layer
+([input-actions](recipes/input-actions.md)): named actions, gamepad buttons named by
+position, prompts for the active device, fixed pause/back and saved rebinding. No npm install, CDN,
 model service or runtime build is needed for these two starters. Python 3.11+ is
 only scaffold/check tooling; browser gameplay is JavaScript. Original library
 recipes/adapters are MIT, upstream notices are retained.

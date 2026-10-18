@@ -1,7 +1,7 @@
 /*
     Empty starter adapted from the LittleJS-AI emptyGame example (MIT, LICENSE-littlejs-ai.txt).
     - A square moved with the keyboard (WASD or arrows) or a gamepad (left stick or d-pad)
-    - Attack with the mouse (left click) moves it to the pointer; Jump (Space, gamepad south button) hops
+    - Fire with the mouse (left click) moves it to the pointer; Jump (Space, gamepad south button) hops
     - Back (Esc, right click, gamepad east button) recenters it
     - Controls come from input.js; the prompt line follows the device used last
 */
@@ -19,7 +19,7 @@ let lastAction;  // name of the last action pressed, shown on screen
 function gameInit()
 {
     // called once after the engine starts up
-    gcInput.init(); // bindings saved in localStorage['<folder name>.settings']
+    gcInput.init(); // bindings saved under '<folder name>.input', here 'empty-game.input'
     cameraScale = 32;
     player = vec2();
     hop = 0;
@@ -32,7 +32,7 @@ function gameUpdate()
     // called every frame at 60 frames per second
     const input = gcInput.update(); // exactly once per frame
     player = player.add(vec2(input.moveX, input.moveY).scale(playerSpeed));
-    if (input.pressed.attack && input.device === 'mouse')
+    if (input.pressed.fire && input.device === 'mouse')
         player = input.mouse.pos.copy();
     if (input.pressed.jump)
         hop = 0.3;
