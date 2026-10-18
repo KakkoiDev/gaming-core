@@ -1,0 +1,8 @@
+{
+  "id": "cozy",
+  "title": "Sunny Acre",
+  "card": "GameCozy",
+  "recipe": "recipes/genres/cozy.md",
+  "orientation": "landscape",
+  "blocks": ["GameKit", "TitleScreen", "SaveSlots", "HudPieces", "DialogueBox", "PauseMenu", "GameSettings", "ControlsRemap", "TutorialPrompt", "ResultsScores", "TouchControls"]
+}

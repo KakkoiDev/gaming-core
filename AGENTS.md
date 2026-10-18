@@ -5,7 +5,9 @@ migration was requested. For a new browser game use the pinned LittleJS-AI route
 [upstream instructions](vendor/littlejs-ai/AGENTS.md) and the relevant
 [recipe](RECIPES.md). Do not load all examples into the prompt.
 
-Choose emptyGame or pong with tools/game.py init into a fresh directory. The
+Choose a genre starter (`tools/game.py genres`, [genres](recipes/genres/README.md)) or
+emptyGame/pong with tools/game.py init into a fresh directory. Genre starters put every word,
+menu and number in HTML through the [game kit](recipes/game-kit.md), in English and Japanese. The
 scaffolder copies actual engine bytes and licenses. Edit the new game, never the
 vendor snapshot. Default engine is the AI snapshot 1.27.0: classic script globals,
 no ESM/LJS namespace. Read its reference before guessing API names. The separate

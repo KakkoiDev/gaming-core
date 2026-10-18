@@ -905,5 +905,142 @@
       "path": "vendor/littlejs-ai/skills/new-littlejs-game/SKILL.md",
       "status": "upstream-reference"
     }
-  ]
+  ],
+  "genres": [
+    {
+      "id": "arcade",
+      "title": "Arcade Pack",
+      "path": "starters/genres/arcade/game.js",
+      "recipe": "recipes/genres/arcade.md",
+      "card": "GameArcade",
+      "test": "tests/genres/arcade.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "cards",
+      "title": "Pocket Duel",
+      "path": "starters/genres/cards/game.js",
+      "recipe": "recipes/genres/cards.md",
+      "card": "GameCards",
+      "test": "tests/genres/cards.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "cozy",
+      "title": "Sunny Acre",
+      "path": "starters/genres/cozy/game.js",
+      "recipe": "recipes/genres/cozy.md",
+      "card": "GameCozy",
+      "test": "tests/genres/cozy.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "idle",
+      "title": "Coin Garden",
+      "path": "starters/genres/idle/game.js",
+      "recipe": "recipes/genres/idle.md",
+      "card": "GameIdle",
+      "test": "tests/genres/idle.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "platformer",
+      "title": "Hop Hill (Platformer)",
+      "path": "starters/genres/platformer/game.js",
+      "recipe": "recipes/genres/platformer.md",
+      "card": "GamePlatformer",
+      "test": "tests/genres/platformer.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "puzzle",
+      "title": "Push Puzzle",
+      "path": "starters/genres/puzzle/game.js",
+      "recipe": "recipes/genres/puzzle.md",
+      "card": "GamePuzzle",
+      "test": "tests/genres/puzzle.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "racing",
+      "title": "Turbo Loop",
+      "path": "starters/genres/racing/game.js",
+      "recipe": "recipes/genres/racing.md",
+      "card": "GameRacing",
+      "test": "tests/genres/racing.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "roguelike",
+      "title": "Deepwell (turn-based roguelike)",
+      "path": "starters/genres/roguelike/game.js",
+      "recipe": "recipes/genres/roguelike.md",
+      "card": "GameRoguelike",
+      "test": "tests/genres/roguelike.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "rpg",
+      "title": "Meadow Tale (top-down RPG)",
+      "path": "starters/genres/rpg/game.js",
+      "recipe": "recipes/genres/rpg.md",
+      "card": "GameRpg",
+      "test": "tests/genres/rpg.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "shooter",
+      "title": "Star Lane",
+      "path": "starters/genres/shooter/game.js",
+      "recipe": "recipes/genres/shooter.md",
+      "card": "GameShooter",
+      "test": "tests/genres/shooter.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "tactics",
+      "title": "Grid Oath (Tactics)",
+      "path": "starters/genres/tactics/game.js",
+      "recipe": "recipes/genres/tactics.md",
+      "card": "GameTactics",
+      "test": "tests/genres/tactics.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "towerdefence",
+      "title": "Garden Guard (Tower Defence)",
+      "path": "starters/genres/towerdefence/game.js",
+      "recipe": "recipes/genres/towerdefence.md",
+      "card": "GameTowerDefence",
+      "test": "tests/genres/towerdefence.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    },
+    {
+      "id": "visualnovel",
+      "title": "Lantern Lane (visual novel)",
+      "path": "starters/genres/visualnovel/game.js",
+      "recipe": "recipes/genres/visualnovel.md",
+      "card": "GameVisualNovel",
+      "test": "tests/genres/visualnovel.cjs",
+      "status": "gaming-core original; scaffolded by tools/game.py init and browser-played by tests/genres.cjs",
+      "engine": "1.27.0"
+    }
+  ],
+  "kit": {
+    "path": "starters/kit/js/kit.js",
+    "recipe": "recipes/game-kit.md",
+    "status": "gaming-core original over the designer's GameKit stylesheet; exercised by every genre test"
+  }
 }

@@ -1,0 +1,30 @@
+/* gaming-core additions to the GameKit stylesheet (styles/game.css stays the designer's file, unchanged).
+   Only helpers the blocks' markup uses that game.css does not define. */
+.game-layer { z-index: 1; } /* LittleJS positions its canvases absolutely: keep the HTML layer above them */
+.game:focus { outline: none; }
+.game [hidden] { display: none !important; } /* the blocks' display: grid must not beat the hidden attribute */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.game-stack { display: grid; gap: 4px; }
+.game-stack[data-align="end"] { justify-items: end; }
+.game-hud [data-slot="tc"] { text-align: center; }
+.game-big { font-size: clamp(20px, 4cqi, 36px); line-height: 1; }
+.game-tutorial { position: absolute; left: 50%; bottom: 96px; transform: translateX(-50%); padding: 8px 12px; background: rgb(0 0 0 / 0.55); pointer-events: none; white-space: nowrap; }
+.game[data-device="touch"] .game-tutorial { bottom: 176px; } /* above the touch controls */
+.game-line .game-more { display: inline-block; margin-left: 0.4em; color: var(--g-accent); }
+.game[data-device="touch"] .game-hint { display: none; }
+.game-touchbtn[data-pressed] { background: var(--g-accent); }
+.game-touch[data-left-handed] { flex-direction: row-reverse; }
+.game-option .game-value { cursor: pointer; }
+.game-name-entry { display: flex; gap: 8px; align-items: center; justify-content: center; }
+.game-name-entry input { font: inherit; font-size: 16px; min-height: 44px; width: 10ch; padding: 0 8px; color: var(--g-ink); background: var(--g-paper); border: 0; box-shadow: 0 0 0 var(--g-px) var(--g-ink); text-transform: uppercase; }
+.game-confirm { position: absolute; inset: 0; display: grid; place-items: center; background: rgb(10 10 20 / 0.5); }
+html[data-text-size="large"] .game { font-size: 115%; }
+html[data-text-size="large"] .game :is(.game-btn, .game-line, .game-hud) { font-size: 18px; }
+.game:has(#ui > section[data-overlay]:not([hidden])) :is(.game-touch, .game-touchbtn[data-action="pause"]) { display: none; }
+.game-scores { display: grid; grid-template-columns: auto 1fr auto auto; gap: 4px 12px; margin: 0; padding: 0; list-style: none; font-variant-numeric: tabular-nums; }
+.game-scores > li { display: contents; }
+.game-scores > li[data-new] > * { color: var(--g-accent); }
+.game-stars { display: flex; gap: 6px; justify-content: center; }
+.game-stars .game-icon { width: 20px; height: 20px; }
+.game-stars .game-icon[data-off] { background: var(--g-dim); }
+.game-detail { flex: 1; min-width: 160px; display: grid; gap: 6px; align-content: start; }

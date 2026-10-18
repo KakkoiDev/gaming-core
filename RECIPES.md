@@ -3,6 +3,8 @@
 | Task | Recipe |
 |---|---|
 | Start a new game | [start](recipes/start.md) |
+| Start from a genre (RPG, shooter, puzzle, cards...) | [genres](recipes/genres/README.md) |
+| Menus, HUD, dialogue, saves and prompts as HTML (game kit) | [game-kit](recipes/game-kit.md) |
 | Movement, keyboard, mouse, touch and gamepads | [movement-and-input](recipes/movement-and-input.md) |
 | Named actions, prompts and rebinding (starter input.js) | [input-actions](recipes/input-actions.md) |
 | Collision, tile maps and platformers | [collision-and-levels](recipes/collision-and-levels.md) |

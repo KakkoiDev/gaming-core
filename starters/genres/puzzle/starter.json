@@ -1,0 +1,8 @@
+{
+  "id": "puzzle",
+  "title": "Push Puzzle",
+  "card": "GamePuzzle",
+  "recipe": "recipes/genres/puzzle.md",
+  "orientation": "portrait",
+  "blocks": ["GameKit", "TitleScreen", "LevelSelect", "HudPieces", "PauseMenu", "GameSettings", "ControlsRemap", "TutorialPrompt", "ResultsScores"]
+}

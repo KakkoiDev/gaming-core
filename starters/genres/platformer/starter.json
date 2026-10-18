@@ -1,0 +1,8 @@
+{
+  "id": "platformer",
+  "title": "Hop Hill (Platformer)",
+  "card": "GamePlatformer",
+  "recipe": "recipes/genres/platformer.md",
+  "orientation": "landscape",
+  "blocks": ["GameKit", "TitleScreen", "HudPieces", "PauseMenu", "GameSettings", "ControlsRemap", "TutorialPrompt", "ResultsScores", "GameOver", "TouchControls"]
+}

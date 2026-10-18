@@ -1,0 +1,8 @@
+{
+  "id": "idle",
+  "title": "Coin Garden",
+  "card": "GameIdle",
+  "recipe": "recipes/genres/idle.md",
+  "orientation": "portrait",
+  "blocks": ["GameKit", "TitleScreen", "HudPieces", "ShopScreen", "PauseMenu", "GameSettings", "ControlsRemap", "TutorialPrompt", "ResultsScores", "TouchControls"]
+}

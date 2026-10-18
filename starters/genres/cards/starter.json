@@ -1,0 +1,8 @@
+{
+  "id": "cards",
+  "title": "Pocket Duel",
+  "card": "GameCards",
+  "recipe": "recipes/genres/cards.md",
+  "orientation": "landscape",
+  "blocks": ["GameKit", "TitleScreen", "CardHand", "HudPieces", "PauseMenu", "GameSettings", "ControlsRemap", "ResultsScores", "GameOver"]
+}
