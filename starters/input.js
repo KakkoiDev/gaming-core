@@ -227,6 +227,7 @@ const gcInput = {
     state: undefined,
     ready: false,
     lastBinding: '',      // binding pressed this tick on any device, for rebinding screens
+    keyboardTap: false,
     keyQueue: [],
     tick: 0,              // engine ticks seen, paused ones included
     readTick: -1,
@@ -253,7 +254,9 @@ const gcInput = {
         gamepadDirectionEmulateStick = false;
         if (!this.ready && typeof document !== 'undefined')
         {
-            document.addEventListener('keydown', (e)=> this.keyQueue.length < 32 && this.keyQueue.push(e.code));
+            document.addEventListener('keydown', (e)=> { this.keyboardTap = true; this.keyQueue.length < 32 && this.keyQueue.push(e.code); });
+            // LittleJS only sees a key held during a tick; a quick tap still makes the keyboard the device in use
+            for (const type of ['pointerdown', 'pointermove', 'wheel']) addEventListener(type, ()=> this.keyboardTap = false, true);
             // count engine ticks, paused ones too, so update() reads each tick exactly once
             if (typeof navigator !== 'undefined' && navigator.keyboard && navigator.keyboard.getLayoutMap)
                 navigator.keyboard.getLayoutMap().then(map=> gcInputCore.layout = Object.fromEntries(map), ()=> {});
@@ -285,8 +288,10 @@ const gcInput = {
             justDisconnected: !connected && !!(previous && previous.gamepad.connected),
             left: state.sticks.left, right: state.sticks.right,
         };
-        // a pulled controller no longer counts as the active device
-        state.device = lastInputDevice === 'gamepad' && !connected ? 'keyboard' : lastInputDevice;
+        // a pulled controller no longer counts as the active device; a tapped key counts until the mouse or a pad moves
+        const padUsed = connected && (Math.hypot(state.sticks.left.x, state.sticks.left.y) > .5 || [...Array(17).keys()].some(b=> gamepadWasPressed(b)));
+        if (padUsed) this.keyboardTap = false;
+        state.device = this.keyboardTap ? 'keyboard' : lastInputDevice === 'gamepad' && !connected ? 'keyboard' : lastInputDevice;
         state.mouse = {pos: mousePos.copy(), screen: mousePosScreen.copy(), delta: mouseDelta.copy(), wheel: mouseWheel, inWindow: mouseInWindow};
         this.lastBinding = this.findPressed();
         this.keyQueue.length = 0;
