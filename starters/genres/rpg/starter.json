@@ -1,0 +1,8 @@
+{
+  "id": "rpg",
+  "title": "Meadow Tale (top-down RPG)",
+  "card": "GameRpg",
+  "recipe": "recipes/genres/rpg.md",
+  "orientation": "landscape",
+  "blocks": ["GameKit", "TitleScreen", "SaveSlots", "PauseMenu", "GameSettings", "ControlsRemap", "HudPieces", "DialogueBox", "InventoryGrid", "TutorialPrompt", "ResultsScores", "GameOver", "TouchControls"]
+}
