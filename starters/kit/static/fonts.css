@@ -1,0 +1,7 @@
+/* Placeholder: the game kit's pixel fonts are not shipped yet.
+   GameKit names Silkscreen (400, 700) and DotGothic16 (400), both SIL Open Font License, kept at
+   static/fonts/<family>/ (woff2 files, OFL.txt, font-face.css) and joined here, one @font-face per file
+   with a src relative to static/ (for example url("fonts/Silkscreen/400-000.woff2")).
+   gaming-core does not vendor them and never loads them from a CDN; Project Start (or the person) fetches
+   them with the person's yes and rewrites this file. Until then styles/game.css falls back to system fonts:
+   ui-monospace / Menlo for Latin text, Hiragino Kaku Gothic ProN / Noto Sans JP for Japanese. */

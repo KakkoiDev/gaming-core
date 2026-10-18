@@ -1,0 +1,8 @@
+{
+  "id": "arcade",
+  "title": "Arcade Pack",
+  "card": "GameArcade",
+  "recipe": "recipes/genres/arcade.md",
+  "orientation": "landscape",
+  "blocks": ["GameKit", "TitleScreen", "HudPieces", "PauseMenu", "GameSettings", "ControlsRemap", "TutorialPrompt", "ResultsScores", "GameOver", "TouchControls"]
+}
