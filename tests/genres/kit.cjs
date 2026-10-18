@@ -62,6 +62,7 @@ exports.play=async function(h,id){
  // touch: a touch pointer shows the on-screen controls (where the genre has them) and Tap prompts
  await h.eval(()=>dispatchEvent(new PointerEvent('pointerdown',{pointerType:'touch',bubbles:true})));
  await h.until(()=>document.getElementById('game').dataset.device==='touch');
+ await h.wait(200);assert.equal(await h.eval(()=>document.getElementById('game').dataset.device),'touch','touch stays the device');
  if(await h.eval(()=>!!document.getElementById('touch')))assert.ok(await h.visible('#touch'),'touch controls shown on touch');
  await h.page.mouse.move(10,10);await h.page.mouse.move(20,20);
 };

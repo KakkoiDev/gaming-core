@@ -25,8 +25,11 @@ jobs:
       - run: npm ci --prefix tests/browser --ignore-scripts
       - run: tests/browser/node_modules/.bin/playwright install --with-deps chromium
       - run: node tests/browser.cjs
+      - run: node tests/genres.cjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: gaming-previews
-          path: .test-output/browser/
+          path: |
+            .test-output/browser/
+            .test-output/genres/

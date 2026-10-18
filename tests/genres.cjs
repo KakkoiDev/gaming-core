@@ -51,7 +51,8 @@ function helpers(page,id){
  let server,browser;const failed=[];
  try{
   for(const id of wanted)execFileSync('python3',['-B',path.join(root,'tools/game.py'),'init',id,'--out',path.join(temporary,id)]);
-  const code='import http.server,functools\ns=http.server.ThreadingHTTPServer(("127.0.0.1",0),functools.partial(http.server.SimpleHTTPRequestHandler,directory='+JSON.stringify(temporary)+'))\nprint(s.server_port,flush=True)\ns.serve_forever()';
+  // a deeper listen queue than http.server's 5: a page asks for ten files at once and a busy machine would reset some
+  const code='import http.server,functools\nclass S(http.server.ThreadingHTTPServer):\n request_queue_size=128\ns=S(("127.0.0.1",0),functools.partial(http.server.SimpleHTTPRequestHandler,directory='+JSON.stringify(temporary)+'))\nprint(s.server_port,flush=True)\ns.serve_forever()';
   server=spawn('python3',['-u','-c',code],{stdio:['ignore','pipe','ignore']});
   const port=await new Promise((resolve,reject)=>{let text='';const timeout=setTimeout(()=>reject(Error('Server timeout')),10000);server.stdout.on('data',d=>{text+=d;if(text.includes('\n')){clearTimeout(timeout);resolve(Number(text.trim()));}});server.on('error',reject);});
   browser=await chromium.launch({headless:true,executablePath,args:['--enable-unsafe-swiftshader']});
@@ -66,7 +67,7 @@ function helpers(page,id){
    page.on('console',m=>{if(m.type()==='error'&&!/favicon|404/.test(m.text()))errors.push(m.text());});
    try{
     await page.goto(`http://127.0.0.1:${port}/${id}/`);
-    await page.waitForFunction(()=>typeof mainCanvas!=='undefined'&&mainCanvas.width>0&&time>0&&document.querySelector('#ui > section:not([hidden])'));
+    await page.waitForFunction(()=>typeof mainCanvas!=='undefined'&&mainCanvas.width>0&&time>0&&document.querySelector('#ui > section:not([hidden])'),undefined,{timeout:60000});
     const h=helpers(page,id);
     await h.shot('start');
     const steps=require(`./genres/${id}.cjs`);

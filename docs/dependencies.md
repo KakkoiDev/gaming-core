@@ -28,12 +28,17 @@ Optional development browser setup:
 npm ci --prefix tests/browser --ignore-scripts
 tests/browser/node_modules/.bin/playwright install chromium
 node tests/browser.cjs
+node tests/genres.cjs          # every genre starter; or: node tests/genres.cjs rpg puzzle
 ```
 
 Without installing, an existing Playwright and Chromium can be used:
 `NODE_PATH=<dir with playwright> GAMING_CORE_CHROMIUM=<chromium or headless_shell path> node tests/browser.cjs`.
 The input mapping unit tests (`node --test tests/input_core.cjs`) need only Node and run in tools/check.py.
 The browser runner also drives keyboard, mouse, wheel and a mocked `navigator.getGamepads()`.
+The genre runner scaffolds each genre starter and plays it (tests/genres/<genre>.cjs), then checks
+the game kit's settings, ControlsRemap, pause on blur and touch on genres that opt in.
+Genre starters ship no fonts: static/fonts.css is a placeholder until Silkscreen and DotGothic16 (OFL)
+are vendored with the person's yes; system fonts show meanwhile.
 
 The browser runner checks copied starters on a local server with external requests
 blocked and saves screenshots. Actual browser evidence is separate from source

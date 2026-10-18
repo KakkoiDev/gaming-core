@@ -8,7 +8,8 @@
 .game-stack[data-align="end"] { justify-items: end; }
 .game-hud [data-slot="tc"] { text-align: center; }
 .game-big { font-size: clamp(20px, 4cqi, 36px); line-height: 1; }
-.game-tutorial { position: absolute; left: 50%; bottom: 96px; transform: translateX(-50%); padding: 8px 12px; background: rgb(0 0 0 / 0.55); pointer-events: none; }
+.game-tutorial { position: absolute; left: 50%; bottom: 96px; transform: translateX(-50%); padding: 8px 12px; background: rgb(0 0 0 / 0.55); pointer-events: none; white-space: nowrap; }
+.game[data-device="touch"] .game-tutorial { bottom: 176px; } /* above the touch controls */
 .game-line .game-more { display: inline-block; margin-left: 0.4em; color: var(--g-accent); }
 .game[data-device="touch"] .game-hint { display: none; }
 .game-touchbtn[data-pressed] { background: var(--g-accent); }

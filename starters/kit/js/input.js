@@ -18,8 +18,11 @@ function gameInputInit(actions = {}, axes = undefined)
 }
 
 // keyboard | mouse | gamepad from gaming-core; touch from pointer events (LittleJS reports a tap as the mouse)
-let touching = false;
+// touch stays the device until a key, a real mouse or the gamepad is used (a tap may reach LittleJS as the mouse or not at all)
+let touching = false, padWas = false;
 addEventListener('pointerdown', (e)=> { touching = e.pointerType === 'touch'; if (touching) gameBox.dataset.device = 'touch'; }, true);
+addEventListener('pointermove', (e)=> { if (e.pointerType === 'mouse') touching = false; }, true);
+addEventListener('keydown', ()=> { touching = false; }, true);
 
 // TouchControls fills this; gameInput() merges it so on-screen buttons press the same actions
 const touchState = {pressed: {}, held: {}, move: null};
@@ -30,8 +33,9 @@ function gameInput()
     const input = gcInput.update();
     if (input.touchMerged) return input;
     input.touchMerged = true;
-    if (!(touching && input.device === 'mouse')) gameBox.dataset.device = input.device;
-    if (input.device !== 'mouse') touching = false;
+    if (input.device === 'gamepad' && !padWas) touching = false;
+    padWas = input.device === 'gamepad';
+    gameBox.dataset.device = touching ? 'touch' : input.device;
     const t = touchState.pressed;
     for (const name in t) { input.pressed[name] = input.pressed[name] || t[name]; }
     for (const name in touchState.held) { input.held[name] = input.held[name] || touchState.held[name]; }

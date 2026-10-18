@@ -13,10 +13,16 @@ handbook or generic game framework is maintained here.
 ```sh
 python3 -B tools/game.py catalog
 python3 -B tools/game.py init pong --out /absolute/fresh/game
+python3 -B tools/game.py genres
+python3 -B tools/game.py init rpg --out /absolute/fresh/rpg
 python3 -B tools/check.py
 ```
 
-Open the generated index.html or serve the folder locally. Both starters play with
+Open the generated index.html or serve the folder locally. Genre starters
+([genres](recipes/genres/README.md)) add the designer's game blocks as HTML over the canvas
+([game kit](recipes/game-kit.md)): title, HUD, pause, settings, controls remapping, dialogue,
+bag, save slots, card hand, game over and results, in English and Japanese, each with a browser
+test that plays the game. Both starters play with
 keyboard, mouse and a standard gamepad through a small action layer
 ([input-actions](recipes/input-actions.md)): named actions, gamepad buttons named by
 position, prompts for the active device, fixed pause/back and saved rebinding. No npm install, CDN,
