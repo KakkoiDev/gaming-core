@@ -1,0 +1,8 @@
+{
+  "id": "towerdefence",
+  "title": "Garden Guard (Tower Defence)",
+  "card": "GameTowerDefence",
+  "recipe": "recipes/genres/towerdefence.md",
+  "orientation": "landscape",
+  "blocks": ["GameKit", "TitleScreen", "HudPieces", "PauseMenu", "GameSettings", "ControlsRemap", "TutorialPrompt", "ResultsScores", "GameOver", "TouchControls"]
+}
