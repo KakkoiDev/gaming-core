@@ -1,0 +1,8 @@
+{
+  "id": "visualnovel",
+  "title": "Lantern Lane (visual novel)",
+  "card": "GameVisualNovel",
+  "recipe": "recipes/genres/visualnovel.md",
+  "orientation": "portrait",
+  "blocks": ["GameKit", "TitleScreen", "DialogueBox", "SaveSlots", "PauseMenu", "GameSettings", "ControlsRemap", "ResultsScores"]
+}
