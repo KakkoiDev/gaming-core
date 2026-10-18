@@ -5,7 +5,7 @@
     {
       "id": "input",
       "path": "starters/input.js",
-      "status": "gaming-core original; unit and browser tested in both scaffolds",
+      "status": "gaming-core original; unit and browser tested in both scaffolds (keyboard, mouse, mocked gamepad, touch API, rebinding, migration)",
       "engine": "1.27.0",
       "recipe": "recipes/input-actions.md"
     },
@@ -18,7 +18,7 @@
     {
       "id": "pong",
       "path": "starters/pong/game.js",
-      "status": "scaffold game.js; browser tested with keyboard, mouse, mocked gamepad, pause",
+      "status": "scaffold game.js; browser tested with keyboard, mouse, mocked gamepad, pause, field framing at 1000x700 and 390x844",
       "engine": "1.27.0"
     }
   ],

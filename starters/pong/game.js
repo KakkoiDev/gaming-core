@@ -1,7 +1,8 @@
 /*
     Pong starter adapted from the LittleJS-AI pong example (MIT, LICENSE-littlejs-ai.txt).
     Controls come from input.js: mouse, keyboard (W/S or arrows) or gamepad (stick or d-pad).
-    Confirm (click, Space, Enter, gamepad A) serves; Pause (Esc, P, gamepad Start) pauses.
+    Confirm (click, Space, Enter, gamepad south button) serves; Pause (Esc, P, gamepad start) pauses.
+    The camera zooms so the whole field fits any window.
 */
 'use strict';
 
@@ -42,7 +43,8 @@ function resetBall(dir)
 
 function gameInit()
 {
-    gcInput.init({storageKey: 'pong.input'});
+    gcInput.init(); // bindings saved in localStorage['<folder name>.settings']
+    fitField();
     leftY = rightY = 0;
     leftScore = rightScore = 0;
     resetBall(rand() < 0.5 ? -1 : 1);
@@ -98,7 +100,7 @@ function gameUpdate()
     if (ballVel.x > 0 && isOverlapping(ball, ballSize, vec2(rightX, rightY), paddleSize))
         bounceOffPaddle(rightX - (paddleSize.x + ballSize.x) / 2, rightY, -1);
 
-    if (ball.x < -half.x*1.5)
+    if (ball.x < -half.x)
     {
         ++rightScore;
         resetBall(1);
@@ -118,8 +120,16 @@ function bounceOffPaddle(ballX, paddleY, dir)
     ballVel = ballVel.normalize(ballSpeed);
 }
 
+// zoom so the field and both paddles fit the window, whatever its shape (38 x 22 units plus a margin)
+function fitField()
+{
+    if (mainCanvasSize.x && mainCanvasSize.y)
+        cameraScale = min(mainCanvasSize.x / (fieldSize.x + 2), mainCanvasSize.y / (fieldSize.y + 6));
+}
+
 function gameUpdatePost()
 {
+    fitField();
 }
 
 function gameRender()
