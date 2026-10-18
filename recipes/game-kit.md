@@ -60,7 +60,7 @@ because LittleJS 1.27.0 already has internal globals with those names.
 | `openSettings()` | GameSettings | audio, language, display; saved in `<game-id>.settings` |
 | `kitControls(rows)`, `openControls()` | ControlsRemap | rebinding through `gcInput`, saved in `<game-id>.input` |
 | `confirmDialog(textKey, okKey, onOk, vars)` | confirm | Cancel focused |
-| `dialogue([{speaker, t, choices: [{t, value}]}], done)`, `dialogueOpen()` | DialogueBox | typed text; the world keeps running |
+| `dialogue([{speaker, t, choices: [{t, value}]}], done)`, `dialogueOpen()`, `dialogueLine()`, `dialogueAdvance()`, `dialogueClose()` | DialogueBox | typed text; the world keeps running |
 | `openInventory({items, max, onUse})` | InventoryGrid | texts `item.<id>`, `item.<id>.desc` |
 | `savesInit({getState, place, onLoad})`, `openSaves('save'|'load')`, `saveLatest()` | SaveSlots | `<game-id>.save.<n>` |
 | `handHTML(cards, selected)` | CardHand | texts `card.<id>`, `card.<id>.text` |
@@ -71,6 +71,17 @@ because LittleJS 1.27.0 already has internal globals with those names.
 | `promptHTML(action)`, `<span data-prompt="jump">` | prompts | keycap, mouse or gamepad position for the device in use |
 
 ## Do not
+
+- Do not reuse the kit's element ids for your own buttons: `title`, `title-name`, `hud`, `pause`, `pause-*`,
+  `settings`, `tab-*`, `panel-*`, `controls`, `confirm`, `confirm-ok`, `confirm-cancel`, `dialogue`, `dlg-*`,
+  `inventory`, `inv-*`, `saves`, `gameover`, `go-title`, `go-detail`, `results`, `res-title`, `res-name`,
+  `res-table`, `tutorial`, `touch`, `touch-pause`, `stick`, `live`.
+- HUD buttons meant for the pointer get `tabindex="-1"` (or `data-pointer-only`): they never take focus,
+  so Space and Enter stay with the game.
+
+- Do not name a top-level variable like an engine global (`floor`, `min`, `max`, `abs`, `time`, `frame`,
+  `paused`, `drawTile`, `BLUE`, `inputUpdate`...): LittleJS declares them, and the page stops loading. Check with
+  `grep -n "^const name\|^let name\|^function name" js/littlejs.js`.
 
 - Do not draw text, menus or numbers on the canvas.
 - Do not read keys directly; add an action to `GAME_ACTIONS` and read `input.pressed.<name>`.

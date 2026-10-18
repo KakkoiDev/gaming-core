@@ -41,6 +41,9 @@ function gameInput()
     for (const name in touchState.held) { input.held[name] = input.held[name] || touchState.held[name]; }
     if (touchState.move) { input.moveX = input.moveX || touchState.move.x; input.moveY = input.moveY || touchState.move.y; }
     touchState.pressed = {};
+    // the click or key that closed a menu belongs to the menu, not to the world on the next tick
+    if (typeof screenOpenedTick !== 'undefined' && gcInput.tick - screenOpenedTick <= 1 && !menuOpen())
+        for (const name in input.pressed) input.pressed[name] = false;
     return input;
 }
 

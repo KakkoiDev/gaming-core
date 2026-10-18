@@ -23,11 +23,21 @@ function menuOpen() { return screenStack.length > 0; }
 
 function focusFirst(el)
 {
-    const target = el.querySelector('[autofocus]:not([disabled])') ||
-        el.querySelector('.game-btn:not(:disabled), [role=tab][aria-selected="true"], .game-list > li[tabindex="0"], .game-option, .game-slot, .game-card, button:not(:disabled)');
+    // HUD buttons for the pointer (tabindex="-1" or data-pointer-only) never take focus
+    const skip = ':not([tabindex="-1"]):not([data-pointer-only])';
+    const target = el.querySelector('[autofocus]:not([disabled])' + skip) ||
+        el.querySelector(['.game-btn:not(:disabled)', '[role=tab][aria-selected="true"]', '.game-list > li[tabindex="0"]', '.game-option', '.game-slot', '.game-card', 'button:not(:disabled)'].map(s=> s + skip).join(', '));
     if (target) target.focus({preventScroll: true});
     else gameBox.focus({preventScroll: true}); // nothing to focus: keys go to the game, not a hidden button
 }
+
+// a screen whose keys belong to HTML controls (not pointer-only HUD buttons)
+function hasMenuItems(el) { return !!el.querySelector('button:not([tabindex="-1"]):not([data-pointer-only]), [tabindex]:not([tabindex="-1"]), input'); }
+
+// the Space or Enter that opened a screen must not click its newly focused button on keyup
+let swallowKeyup = false;
+document.addEventListener('keydown', ()=> { swallowKeyup = false; }, true);
+document.addEventListener('keyup', (e)=> { if (swallowKeyup && (e.code === 'Space' || e.code === 'Enter')) { e.preventDefault(); swallowKeyup = false; } }, true);
 
 function showScreen(el)
 {
@@ -38,7 +48,7 @@ function showScreen(el)
     screenOpenedTick = gcInput.tick;
     if (el && !screenStack.length)
     {
-        setInputPreventDefault(!el.querySelector('button, [tabindex]'));
+        setInputPreventDefault(!hasMenuItems(el));
         focusFirst(el);
     }
     else if (!el && document.activeElement && document.activeElement !== document.body) gameBox.focus({preventScroll: true});
@@ -52,6 +62,7 @@ function openScreen(el, opener = document.activeElement)
     screenStack.push({el, opener, hidden});
     el.hidden = false;
     screenOpenedTick = gcInput.tick;
+    swallowKeyup = true;
     setInputPreventDefault(false);          // let keys reach the HTML buttons
     focusFirst(el);
 }
@@ -64,7 +75,7 @@ function closeScreen(el)
     el.hidden = true;
     for (const s of entry.hidden) s.hidden = false;
     screenOpenedTick = gcInput.tick;
-    if (!screenStack.length) setInputPreventDefault(!(baseScreen && baseScreen.querySelector('button, [tabindex]')));
+    if (!screenStack.length) setInputPreventDefault(!(baseScreen && hasMenuItems(baseScreen)));
     if (entry.opener && entry.opener.isConnected && !entry.opener.closest('[hidden]')) entry.opener.focus({preventScroll: true});
     else if (topScreen()) focusFirst(topScreen());
 }

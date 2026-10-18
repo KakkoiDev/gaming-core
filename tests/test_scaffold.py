@@ -35,7 +35,7 @@ class Scaffold(unittest.TestCase):
     def test_reference_catalog_paths(self):
         catalog=json.loads((ROOT/'CATALOG.json').read_text())
         self.assertGreater(len(catalog['examples']),50)
-        for entry in catalog['examples']+catalog['templates']+catalog['skills']+catalog['starters']:
+        for entry in catalog['examples']+catalog['templates']+catalog['skills']+catalog['starters']+catalog['genres']+[catalog['kit']]:
             self.assertTrue((ROOT/entry['path']).is_file(),entry['path'])
 
     def test_genre_starters(self):

@@ -525,6 +525,9 @@ function openControls()
 
 let dialogueState = null;
 function dialogueOpen() { return !!dialogueState; }
+function dialogueLine() { return dialogueState ? dialogueState.i : -1; }           // the line shown now
+function dialogueAdvance() { dialogueState?.advance(); }                           // finish typing, or the next line
+function dialogueClose() { const d = dialogueState; if (!d) return; dialogueState = null; closeScreen(d.el); d.el.remove(); } // no callback
 function dialogue(lines, onDone)
 {
     const el = kitSection('dialogue', `
@@ -567,6 +570,7 @@ function dialogue(lines, onDone)
             menu.innerHTML = line.choices.map((c, n)=> `<li><button class="game-btn" data-choice="${n}" ${n ? '' : 'autofocus'}>${esc(t(c.t))}</button></li>`).join('');
             menu.hidden = false;
             menu.querySelectorAll('button').forEach((b, n)=> b.addEventListener('click', ()=> finish(line.choices[n].value)));
+            swallowKeyup = true; // the Space that finished the line must not pick the first choice
             menu.querySelector('button').focus();
         }
     };
@@ -577,6 +581,7 @@ function dialogue(lines, onDone)
         if (d.shown < d.text.length) { d.shown = d.text.length; draw(); }
         else if (!lines[d.i].choices) next();
     };
+    dialogueState.advance = advance;
     el.querySelector('.game-panel').addEventListener('click', (e)=> { if (!e.target.closest('button')) advance(); });
     el.addEventListener('game:input', (e)=>
     {
