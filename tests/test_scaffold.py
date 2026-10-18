@@ -23,9 +23,16 @@ class Scaffold(unittest.TestCase):
                 with self.assertRaises(ValueError):game.init(preset,output)
                 self.assertTrue((output/'game.js').exists())
                 self.assertTrue((output/'LICENSE-littlejs-ai.txt').exists())
+                self.assertTrue((output/'LICENSE-gaming-core.txt').exists())
+                self.assertLess(html.index('src=dist/littlejs.js'),html.index('src=input.js'));self.assertLess(html.index('src=input.js'),html.index('src=game.js'))
+                self.assertEqual((output/'input.js').read_bytes(),(ROOT/'starters/input.js').read_bytes())
+                self.assertEqual((output/'game.js').read_bytes(),(ROOT/'starters'/preset/'game.js').read_bytes())
+                self.assertIn('gcInput.update()',(output/'game.js').read_text())
+                self.assertEqual(json.loads((output/'build.json').read_text())['sources'],['input.js','game.js'])
+                for name,entry in metadata['local_files'].items():self.assertEqual(entry['sha256'],hashlib.sha256((output/name).read_bytes()).hexdigest())
 
     def test_reference_catalog_paths(self):
         catalog=json.loads((ROOT/'CATALOG.json').read_text())
         self.assertGreater(len(catalog['examples']),50)
-        for entry in catalog['examples']+catalog['templates']+catalog['skills']:
+        for entry in catalog['examples']+catalog['templates']+catalog['skills']+catalog['starters']:
             self.assertTrue((ROOT/entry['path']).is_file(),entry['path'])

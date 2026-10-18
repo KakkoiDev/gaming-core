@@ -30,6 +30,11 @@ tests/browser/node_modules/.bin/playwright install chromium
 node tests/browser.cjs
 ```
 
+Without installing, an existing Playwright and Chromium can be used:
+`NODE_PATH=<dir with playwright> GAMING_CORE_CHROMIUM=<chromium or headless_shell path> node tests/browser.cjs`.
+The input mapping unit tests (`node --test tests/input_core.cjs`) need only Node and run in tools/check.py.
+The browser runner also drives keyboard, mouse, wheel and a mocked `navigator.getGamepads()`.
+
 The browser runner checks copied starters on a local server with external requests
 blocked and saves screenshots. Actual browser evidence is separate from source
 checks. Reference examples remain unverified until their own scenarios are tested.

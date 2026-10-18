@@ -3,7 +3,9 @@
 All pinned examples remain unchanged under vendor/. The default is the LittleJS-AI
 snapshot (engine 1.27.0). The separate engine repository snapshot is 1.27.2.
 Never combine their dist files and API assumptions silently. Only copied emptyGame
-and pong are supported by our scaffolder; other examples are reference-only.
+and pong are supported by our scaffolder; other examples are reference-only. The scaffolder
+replaces their game.js with [starters](../starters/) versions wired to
+[input.js](../starters/input.js) (keyboard, mouse, gamepad actions).
 Vite/TypeScript/ThreeJS/Box2D examples may require extra tools or assets.
 
 | Engine snapshot | Example | Status |
