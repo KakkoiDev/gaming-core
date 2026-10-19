@@ -70,7 +70,7 @@ module.exports=function(test){
   // (held only until the turn shows: a slow machine runs several world steps per input tick)
   await h.ready();await h.pad('button',15,true);await h.until(()=>player.face.x===1);await h.pad('button',15,false);
   assert.equal((await at(h)).x,4,'a new direction only turns');
-  await h.padTap(15);await h.until(()=>player.x===5);
+  await h.ready();await h.pad('button',15,true);await h.until(()=>player.x===5);await h.pad('button',15,false);
   await h.pad('disconnect');
  });
 
