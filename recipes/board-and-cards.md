@@ -12,3 +12,5 @@ Local reference paths:
 Read the pinned upstream AGENTS.md/reference for the selected engine before adapting.
 Keep copied upstream license notices. Reference availability is not browser verification
 of every example. Test the actual host result and report any unsupported features.
+
+Scenarios: [cards](../starters/genres/cards/SCENARIOS.md), [puzzle](../starters/genres/puzzle/SCENARIOS.md), [tactics](../starters/genres/tactics/SCENARIOS.md).

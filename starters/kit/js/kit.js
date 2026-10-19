@@ -54,9 +54,11 @@ function applyTexts(root = document)
 {
     document.documentElement.lang = settings.lang;
     document.documentElement.dataset.textSize = settings.textSize;
-    for (const e of root.querySelectorAll('[data-t]'))
+    // root itself too: a lone button (the touch Pause) is its own root
+    const all = (selector)=> root.matches?.(selector) ? [root, ...root.querySelectorAll(selector)] : root.querySelectorAll(selector);
+    for (const e of all('[data-t]'))
         e.textContent = t(e.dataset.t, e.dataset.tVars ? JSON.parse(e.dataset.tVars) : undefined);
-    for (const e of root.querySelectorAll('[data-t-label]'))
+    for (const e of all('[data-t-label]'))
         e.setAttribute('aria-label', t(e.dataset.tLabel, e.dataset.tVars ? JSON.parse(e.dataset.tVars) : undefined));
     renderPrompts(root);
 }
@@ -308,8 +310,8 @@ function openSettings()
       <button class="game-tab" role="tab" id="tab-controls" aria-selected="false" tabindex="-1" data-t="settings.controls"></button>
     </div>
     <div id="panel-audio" role="tabpanel" aria-labelledby="tab-audio">
-      <div class="game-option" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="10" data-setting="music"><span data-t="settings.music"></span><span class="game-value"></span></div>
-      <div class="game-option" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="10" data-setting="sfx"><span data-t="settings.sfx"></span><span class="game-value"></span></div>
+      <div class="game-option" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="10" data-setting="music" data-t-label="settings.music"><span data-t="settings.music"></span><span class="game-value"></span></div>
+      <div class="game-option" tabindex="0" role="slider" aria-valuemin="0" aria-valuemax="10" data-setting="sfx" data-t-label="settings.sfx"><span data-t="settings.sfx"></span><span class="game-value"></span></div>
       <div class="game-option" tabindex="0" role="switch" data-setting="muteBackground"><span data-t="settings.mute_background"></span><span class="game-value"></span></div>
     </div>
     <div id="panel-lang" role="tabpanel" aria-labelledby="tab-lang" hidden>

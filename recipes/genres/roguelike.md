@@ -32,7 +32,7 @@ The variable for the floor number is `depth`: LittleJS already has a global `flo
 - Another item: a list like `potions`, picked up in `playerTurn`, a `use_item_2` action, a HUD slot.
 - Fog of war or a minimap: keep a `seen` set in `playerTurn` and skip unseen tiles in `gameRender`.
 
-## Tested (tests/genres/roguelike.cjs)
+## Tested (tests/e2e/genres/roguelike.cjs, one test per scenario)
 
 A fixed seed (4242) started with Enter, the same layout for the same seed and floor, one tap one
 step, walking with the arrow keys (shortest path read from the page) to bump a monster until it
@@ -40,4 +40,10 @@ dies and it hits back, a potion picked up and drunk with 1, pause freezes the wo
 d-pad step, the stairs to floor 2; floor 3 with the player put next to the stairs once, the last
 step into the run summary, New Run; at 1 HP walking into a slime into Run Over (cause and floor in
 the detail, New Run first, no Load), New Run, Quit to the title. Then the kit checks
-(tests/genres/kit.cjs).
+(tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/roguelike/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/roguelike.cjs` (`node tests/e2e.cjs roguelike`). A change to the game changes its scenario and test first.

@@ -32,10 +32,16 @@ Touch: the kit's stick moves the ship, firing is automatic, the Bomb button is b
 - More stages: keep a `stage` number, give each its `WAVES` and boss, and add a `results.next` item to `win()`.
 - The card's upgrade pick between stages: a `handHTML` of three cards (Spread, Shield, Speed) in an overlay.
 
-## Tested (tests/genres/shooter.cjs)
+## Tested (tests/e2e/genres/shooter.cjs, one test per scenario)
 
 Start from the title with Enter, hold Z and sweep with the arrow keys until enemies fall and the score rises, a
 bomb clears the enemy bullets, Esc pauses and the stage stops, the gamepad stick moves the ship and south fires,
 the boss arrives with its HP bar, its HP is lowered once and the mouse (left button held) steers and fires until
 it is beaten, the name goes into the top-10 table; a new run where the last life is hit (forced once) opens Game
-Over, Continue resets the score, Quit returns to the title. Then the kit checks (tests/genres/kit.cjs).
+Over, Continue resets the score, Quit returns to the title. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/shooter/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/shooter.cjs` (`node tests/e2e.cjs shooter`). A change to the game changes its scenario and test first.

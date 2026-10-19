@@ -11,3 +11,5 @@ Local reference paths:
 Read the pinned upstream AGENTS.md/reference for the selected engine before adapting.
 Keep copied upstream license notices. Reference availability is not browser verification
 of every example. Test the actual host result and report any unsupported features.
+
+Scenarios: [emptyGame](../starters/emptyGame/SCENARIOS.md), [pong](../starters/pong/SCENARIOS.md) and every genre's (lose, restart, score).

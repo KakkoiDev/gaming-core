@@ -140,7 +140,8 @@ function goScene(id, line = 0)
     const token = ++transitionToken;
     state = 'fade';
     fade = 1;
-    kitAfter(.35, ()=> { if (token === transitionToken && state === 'fade') openScene(id, line); });
+    const open = ()=> { if (token !== transitionToken || state !== 'fade') return; if (paused) return kitAfter(.1, open); openScene(id, line); };
+    kitAfter(.35, open);
 }
 
 function openScene(id, line)
@@ -417,7 +418,7 @@ function gameUpdate()
         if (input.pressed.auto && top && top.id === 'dialogue') toggleAuto();
         autoUpdate();
     }
-    if (state !== 'play' || menuOpen()) return;
+    if (state !== 'play' && state !== 'fade' || menuOpen()) return;
     if (input.pressed.pause) return openPause();
 }
 

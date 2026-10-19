@@ -100,7 +100,7 @@ Saved bindings load in init; invalid or unknown saved entries fall back to the d
   (`touchGamepadEnable = true`) for stick and buttons; it is not covered by these tests.
 - Pointer lock is the engine's `pointerLockRequest()` after a click; `mouse.delta` keeps working.
 
-Tests: [input_core.cjs](../tests/input_core.cjs) (mapping) and [browser.cjs](../tests/browser.cjs)
+Tests: [input_core.cjs](../tests/input_core.cjs) (mapping) and the scenarios of [emptyGame](../starters/emptyGame/SCENARIOS.md) and [pong](../starters/pong/SCENARIOS.md) ([emptyGame.cjs](../tests/e2e/emptyGame.cjs), [pong.cjs](../tests/e2e/pong.cjs))
 (keyboard, mouse, mocked gamepad, rebinding in both starters).
 
 Local reference paths:
@@ -113,3 +113,5 @@ Local reference paths:
 Read the pinned upstream AGENTS.md/reference for the selected engine before adapting.
 Keep copied upstream license notices. Reference availability is not browser verification
 of every example. Test the actual host result and report any unsupported features.
+
+Scenarios: [emptyGame](../starters/emptyGame/SCENARIOS.md), [pong](../starters/pong/SCENARIOS.md), and ControlsRemap in [the game kit's](../starters/kit/SCENARIOS.md).

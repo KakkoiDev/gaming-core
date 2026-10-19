@@ -97,3 +97,5 @@ Local reference paths:
 - [game.css](../starters/kit/styles/game.css)
 - [messages.js](../starters/kit/js/messages.js)
 - [genre recipes](genres/README.md)
+
+Scenarios: [the game kit's](../starters/kit/SCENARIOS.md), played on every genre by `node tests/e2e.cjs`.

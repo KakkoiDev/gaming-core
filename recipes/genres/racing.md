@@ -33,10 +33,16 @@ Read the [game kit](../game-kit.md) recipe for the blocks.
 - Card items left for you: a Grand Prix of 4 tracks with points, LevelSelect of tracks with best laps, car pick,
   the time-trial ghost, skid marks, tilt steering.
 
-## Tested (tests/genres/racing.cjs)
+## Tested (tests/e2e/genres/racing.cjs, one test per scenario)
 
 Countdown holds the cars, the accelerator drives down the straight to checkpoint 1 (the start line at the start is
 not a lap), steering and brake, the HUD speed, pause freezes the race, the line without the checkpoints before it
 is not a lap, 3 laps (moved to the last checkpoint once per lap) into "You finished 1st" and the race table, Retry,
 the gamepad's right trigger accelerating and its stick steering, finishing last into Game Over, Back to Title,
-Time Trial with the best lap saved. Then the kit checks (tests/genres/kit.cjs).
+Time Trial with the best lap saved. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/racing/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/racing.cjs` (`node tests/e2e.cjs racing`). A change to the game changes its scenario and test first.
