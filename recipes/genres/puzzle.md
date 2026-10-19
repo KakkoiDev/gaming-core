@@ -34,11 +34,17 @@ ring with a diamond, player = round body with eyes, wall = bricks.
   `loadLevel`/`step`/`gameRender` for the variant's rule; match-3 adds a move limit and `gameOver()`
   with "+5 Moves" (texts `hud.moves_left`, `over.more_moves`).
 
-## Tested (tests/genres/puzzle.cjs)
+## Tested (tests/e2e/genres/puzzle.cjs, one test per scenario)
 
 Level 1 solved with real key presses and one gamepad d-pad push: a push undone with Z puts the crate
 back, a wall blocks, Restart resets and can be undone, Backspace and the HUD's Restart button work,
 Esc pauses (keys do not move the player). Results show 3 stars at par and save progress, Next (focused)
 opens level 2, a click on a neighbour cell steps, a far click does not, level 2 solved, portrait layout,
 Play continues at level 3, Quit asks first, LevelSelect shows stars and focuses the next unsolved level.
-Then the kit checks (tests/genres/kit.cjs).
+Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/puzzle/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/puzzle.cjs` (`node tests/e2e.cjs puzzle`). A change to the game changes its scenario and test first.

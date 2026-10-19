@@ -11,3 +11,5 @@ Local reference paths:
 Read the pinned upstream AGENTS.md/reference for the selected engine before adapting.
 Keep copied upstream license notices. Reference availability is not browser verification
 of every example. Test the actual host result and report any unsupported features.
+
+No scenarios: drawing guidance; what a player sees is verified through the starters' scenarios.

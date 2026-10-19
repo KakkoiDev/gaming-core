@@ -34,11 +34,17 @@ click picks a slot). Touch: stick, Tool, Talk and Use buttons.
 - More villagers: objects with `kind: 'npc'` and their own lines in `talk()`; keep friendship in the save.
 - Save slots: pass `onSave` to `pauseMenu` and call `savesInit({getState, place: ()=> 'cozy.place', onLoad})`.
 
-## Tested (tests/genres/cozy.cjs)
+## Tested (tests/e2e/genres/cozy.cjs, one test per scenario)
 
 New Game from the title with Enter, the gamepad's shoulders switch tools and the d-pad turns and steps,
 till, plant and water with C and 1-3, walk to the bed and sleep (confirm), the End of Day summary and the
 sprout, Next Morning autosaves, water again, the clock runs and the day ends at 24:00 (forced to a minute
 before), the crop ripens (forced once), harvest with the hands, sell at the bin with the goal near (forced),
 the Farm Goal results, Keep Farming, talk to Mabel and take the seeds choice, pause freezes the clock,
-quit, reload and Continue restores day 3's farm. Then the kit checks (tests/genres/kit.cjs).
+quit, reload and Continue restores day 3's farm. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/cozy/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/cozy.cjs` (`node tests/e2e.cjs cozy`). A change to the game changes its scenario and test first.

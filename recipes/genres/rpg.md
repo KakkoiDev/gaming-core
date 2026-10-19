@@ -34,10 +34,16 @@ Read the [game kit](../game-kit.md) recipe for the blocks.
 - Save points only: pass `onSave` to `pauseMenu` only while the hero stands on one (call `pauseMenu` again).
 - Not in this starter (on the card): MP, Equipment, ShopScreen, QuestLog, MapScreen and the minimap, turn-based battles.
 
-## Tested (tests/genres/rpg.cjs)
+## Tested (tests/e2e/genres/rpg.cjs, one test per scenario)
 
 New Game from the title, the gamepad stick walks and north/east open and close the bag, walk to the elder, talk and
 accept the quest (the objective shows), fight the nearest slime with Attack until it dies, pick up its potion and
 drink it from the bag, Esc pauses and freezes the slimes, save in slot 1, fetch the key (one teleport) and walk it
 back: Quest Complete, Keep Exploring, faint (HP forced to 0): Game Over, Back to Title, Continue loads slot 1, quit
-to the title. Then the kit checks (tests/genres/kit.cjs).
+to the title. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/rpg/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/rpg.cjs` (`node tests/e2e.cjs rpg`). A change to the game changes its scenario and test first.

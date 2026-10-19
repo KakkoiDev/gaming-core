@@ -36,10 +36,16 @@ bottom right. The range circle shows for the chosen tower under the cursor.
 - Upgrade and Sell (the card's tower panel): select a tower with `fire` when the cursor is on it
   (`towerAt(cursor)`), open an overlay with `openScreen` and two menu buttons, `tower.upgrade` / `tower.sell`.
 
-## Tested (tests/genres/towerdefence.cjs)
+## Tested (tests/e2e/genres/towerdefence.cjs, one test per scenario)
 
 Enter starts without placing, a Bolt placed with the arrow keys and Space, the path and gold refusals in the
 HUD, a second Bolt placed with the mouse, the gamepad d-pad steps the cursor and the shoulders cycle towers,
 N starts wave 1 and kills raise the gold, Esc freezes the enemies, wave gold buys more towers, a skip to the
 last wave survived into the results with stars by lives, and a new game with lives forced to 1 lost into
-Game Over. Then the kit checks (tests/genres/kit.cjs).
+Game Over. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/towerdefence/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/towerdefence.cjs` (`node tests/e2e.cjs towerdefence`). A change to the game changes its scenario and test first.

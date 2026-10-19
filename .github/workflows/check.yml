@@ -24,12 +24,12 @@ jobs:
           node-version: '22'
       - run: npm ci --prefix tests/browser --ignore-scripts
       - run: tests/browser/node_modules/.bin/playwright install --with-deps chromium
-      - run: node tests/browser.cjs
-      - run: node tests/genres.cjs
+      - name: Scenario e2e tests (every starter's SCENARIOS.md, one test per scenario)
+        run: node tests/e2e.cjs
+      - name: 'Testing protocol (test-core): scenarios ran and passed, control coverage, flaky patterns'
+        run: sh tests/protocol.sh
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: gaming-previews
-          path: |
-            .test-output/browser/
-            .test-output/genres/
+          path: .test-output/e2e/

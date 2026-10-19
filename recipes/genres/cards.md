@@ -35,10 +35,16 @@ opponent when the lane is open; they can attack on the turn they are played.
 - Targeted spells (the card's target choice): after `playCard` picks a spell, focus the enemy labels and
   wait for confirm instead of `strongest()`.
 
-## Tested (tests/genres/cards.cjs)
+## Tested (tests/e2e/genres/cards.cjs, one test per scenario)
 
 Enter starts a match, arrows choose a 1-cost unit and Enter plays it (its label shows its numbers), F
 attacks the open lane, E ends the turn, the computer's turn freezes under Esc and goes on after it, a
 click plays a card, the gamepad's d-pad moves the choice and west attacks, a portrait screenshot, a win
 (the opponent at 1 health facing your unit) into Results and Rematch, a loss (you at 1 health facing a
-computer unit) into Game Over and back to the title. Then the kit checks (tests/genres/kit.cjs).
+computer unit) into Game Over and back to the title. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/cards/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/cards.cjs` (`node tests/e2e.cjs cards`). A change to the game changes its scenario and test first.

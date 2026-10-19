@@ -37,7 +37,7 @@ window every frame in `gameUpdatePost`.
 - Smarter enemies: `enemyAct` (hold a tile, guard, retreat when weak).
 - Another goal ("Survive 8 turns"): check it in `updateEnemyPhase` and change `goal.defeat_all`.
 
-## Tested (tests/genres/tactics.cjs)
+## Tested (tests/e2e/genres/tactics.cjs, one test per scenario)
 
 Enter starts; the gamepad d-pad steps the cursor; keys select the Knight, move it, open the action
 menu (Attack disabled), back undoes the move, Wait; the mouse hovers, selects and right-click
@@ -45,4 +45,10 @@ cancels; End Turn asks first and the enemy phase moves the enemies; a real attac
 the cursor with keys, with the forecast's hit chance checked; a win with the last enemy forced to
 1 HP beside a unit, into the results with stars; Retry; Esc pauses and freezes the battle; a loss
 forced once (one unit at 1 HP beside a Brute, End Turn) into Game Over, then the title. Then the
-kit checks (tests/genres/kit.cjs).
+kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/tactics/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/tactics.cjs` (`node tests/e2e.cjs tactics`). A change to the game changes its scenario and test first.

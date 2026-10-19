@@ -32,10 +32,16 @@ Game Over with Continue. Read the [game kit](../game-kit.md) recipe for the bloc
 - A new move (wall jump, dash): an action in `GAME_ACTIONS`, a row in `kitControls`, a `tutorial()` prompt.
 - A new enemy kind: a map letter, a case in `build()`, its motion in `updateWorld()`, its shape in `gameRender()`.
 
-## Tested (tests/genres/platformer.cjs)
+## Tested (tests/e2e/genres/platformer.cjs, one test per scenario)
 
 Play from the title with Enter, walk with the arrow keys over coins (HUD updates), a held jump onto a
 raised platform, walk into an enemy (a life lost, back to the start), the hero moved once near the
 flag then walks into it: results with time, coins, stars and a saved best time, Replay, Esc freezes the
 world, the gamepad's d-pad walks and south jumps, the last life forced once then lost to an enemy:
-Game Over, back to the title. Then the kit checks (tests/genres/kit.cjs).
+Game Over, back to the title. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/platformer/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/platformer.cjs` (`node tests/e2e.cjs platformer`). A change to the game changes its scenario and test first.

@@ -20,7 +20,10 @@ pure rules/data transformations; it does not replace mutable EngineObjects.
 visual-core owns UI/art generation; Pi's existing music tool owns custom audio;
 p2p-core owns networking. No MCP server or new chat loop belongs here.
 
-Run tools/check.py and the browser checks documented in docs/dependencies.md.
+Run tools/check.py and the browser checks documented in docs/dependencies.md. Testing protocol
+(test-core, in test-core/): a new or changed behaviour of a starter is a Given/When/Then scenario in its
+SCENARIOS.md first, then one e2e test of exactly that title (tests/e2e/); controls by role and name; no
+fixed waits; removing a control removes its step and scenario in the same change.
 Inspect the actual game and console, test controls/restart and present a screenshot
 or playable path. Distinguish copied examples from verified behavior. Keep metadata
 and licenses on export; never silently fetch CDN dependencies. Use the user's

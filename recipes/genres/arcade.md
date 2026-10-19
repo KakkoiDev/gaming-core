@@ -24,10 +24,16 @@ Read the [game kit](../game-kit.md) recipe for the blocks.
 - Faster or slower: `bricks.speed()` (keep the cap so a phone can follow), `snake` step time.
 - Two players in Paddle: add a `p2` axis action (W/S) and read it instead of the computer.
 
-## Tested (tests/genres/arcade.cjs)
+## Tested (tests/e2e/genres/arcade.cjs, one test per scenario)
 
 Title focus and gamepad navigation, Bricks served and played with the mouse until bricks break,
 the wall cleared into Next Level, every life lost into the name entry and the table, pause freezes
 the ball, Quit asks first, Snake eats and crashes, Paddle scores and wins. Then the kit checks
-(tests/genres/kit.cjs): language, saved settings, ControlsRemap listen, refuse a fixed key and reset,
+(tests/e2e/kit.cjs): language, saved settings, ControlsRemap listen, refuse a fixed key and reset,
 pause on blur, touch.
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/arcade/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/arcade.cjs` (`node tests/e2e.cjs arcade`). A change to the game changes its scenario and test first.

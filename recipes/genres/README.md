@@ -2,7 +2,7 @@
 
 `python3 -B tools/game.py genres` lists them; `python3 -B tools/game.py init <genre> --out <dir>`
 scaffolds one. Each is a playable game on the [game kit](../game-kit.md) with a browser test that
-plays it (tests/genres/<genre>.cjs, run by `node tests/genres.cjs`).
+plays its scenarios (starters/genres/<genre>/SCENARIOS.md, one test each in tests/e2e/genres/<genre>.cjs, run by `node tests/e2e.cjs`).
 
 | Genre | Game | Recipe | Designer card |
 |---|---|---|---|

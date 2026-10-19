@@ -27,19 +27,27 @@ Optional development browser setup:
 ```sh
 npm ci --prefix tests/browser --ignore-scripts
 tests/browser/node_modules/.bin/playwright install chromium
-node tests/browser.cjs
-node tests/genres.cjs          # every genre starter; or: node tests/genres.cjs rpg puzzle
+node tests/e2e.cjs             # every starter's scenarios; or: node tests/e2e.cjs pong rpg [--grep <title>]
+sh tests/protocol.sh           # then: each scenario's test passed, every control used, no fixed waits
 ```
 
 Without installing, an existing Playwright and Chromium can be used:
-`NODE_PATH=<dir with playwright> GAMING_CORE_CHROMIUM=<chromium or headless_shell path> node tests/browser.cjs`.
+`NODE_PATH=<dir with playwright> GAMING_CORE_CHROMIUM=<chromium or headless_shell path> node tests/e2e.cjs`.
 The input mapping unit tests (`node --test tests/input_core.cjs`) need only Node and run in tools/check.py.
-The browser runner also drives keyboard, mouse, wheel and a mocked `navigator.getGamepads()`.
-The genre runner scaffolds each genre starter and plays it (tests/genres/<genre>.cjs), then checks
-the game kit's settings, ControlsRemap, pause on blur and touch on genres that opt in.
+The scenario runner (tests/e2e.cjs) scaffolds emptyGame, pong and every genre starter and plays one test per
+scenario of its `SCENARIOS.md` (tests/e2e/<starter>.cjs, tests/e2e/genres/<genre>.cjs), each on a fresh page, then the
+game kit's scenarios (tests/e2e/kit.cjs) on every genre. It drives keyboard, mouse, wheel, touch and a mocked
+`navigator.getGamepads()`, finds controls by role and name, waits for state or input ticks (never for time), and
+launches Chromium with `--use-mock-keychain --password-store=basic`.
+
+Testing protocol (the same as Pi Workbench's, from [test-core](https://github.com/KakkoiDev/test-core), adopted into
+`test-core/`; the commit is in `test-core/MANIFEST.json`): every starter has Given/When/Then scenarios, each one an e2e
+test of the same title; every control a game shows has a step that uses it, and a step that uses a control which no
+longer exists fails (`test-core/tools/e2e_coverage.py` over the markup the runner saves); no fixed waits
+(`flaky_lint.py`). Removing a feature means removing its scenario and test in the same change.
 Genre starters ship no fonts: static/fonts.css is a placeholder until Silkscreen and DotGothic16 (OFL)
 are vendored with the person's yes; system fonts show meanwhile.
 
-The browser runner checks copied starters on a local server with external requests
+The scenario runner checks copied starters on a local server with external requests
 blocked and saves screenshots. Actual browser evidence is separate from source
 checks. Reference examples remain unverified until their own scenarios are tested.

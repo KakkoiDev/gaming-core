@@ -32,7 +32,7 @@ button), at the goal, on prestige and on Quit.
 - Prestige: `prestige()` adds 1 to `mult`; make it depend on `total` for a classic curve.
 - Rows 1-9 as keys: add `buy1`..`buy9` actions (`key:Digit1`...) and buy that row when pressed.
 
-## Tested (tests/genres/idle.cjs)
+## Tested (tests/e2e/genres/idle.cjs, one test per scenario)
 
 Enter starts from the title; Space and a click on the coin earn (a click beside it does not); the buy prompt
 shows when the first helper is affordable and Enter buys it; income rises with time alone; a click on the list
@@ -40,4 +40,10 @@ buys another; Tab cycles ×1 ×10 ×100 Max; the gamepad's south earns and the d
 the world and saves; a reload (the save shifted an hour back once) skips the title, restores the garden and pays
 half an hour of income in the welcome-back dialog; one push near the goal and Space reaches it into the results
 (Keep Growing focused); prestige asks first with Cancel focused and restarts with ×2; Quit returns to the title,
-which now offers Continue. Then the kit checks (tests/genres/kit.cjs).
+which now offers Continue. Then the kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/idle/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/idle.cjs` (`node tests/e2e.cjs idle`). A change to the game changes its scenario and test first.

@@ -36,7 +36,7 @@ d-pad then south, or a click. Esc or the Menu button pauses (Save, Settings, Con
 - A character: an entry in `CAST` (coat hue, hair, height) and `vn.who.<id>`; expressions would be extra
   shapes in `drawCharacter` keyed by a `face` on the line.
 
-## Tested (tests/genres/visualnovel.cjs)
+## Tested (tests/e2e/genres/visualnovel.cjs, one test per scenario)
 
 New Game from the title with Enter, a line still typing completed by Enter then advanced by Enter, one
 line advanced with the gamepad's south button, the log opened with L and closed with Esc in place, the
@@ -44,4 +44,10 @@ first choice picked with ↓ Enter, Esc pauses and the scene freezes, Save to sl
 (scene, line, flags), the searched route's line on the river, choice 1 by the 1 key, ending 1. Then a
 page reload, Continue (focused) restores the saved line and flags, Auto advances by itself and A turns
 it off, a portrait screenshot, the other branch to ending 2, and the Endings list shows both. Then the
-kit checks (tests/genres/kit.cjs).
+kit checks (tests/e2e/kit.cjs).
+
+## Scenarios
+
+What this starter does, as Given/When/Then: [SCENARIOS.md](../../starters/genres/visualnovel/SCENARIOS.md), plus the
+[game kit's](../../starters/kit/SCENARIOS.md). Each scenario is one test of the same title in
+`tests/e2e/genres/visualnovel.cjs` (`node tests/e2e.cjs visualnovel`). A change to the game changes its scenario and test first.
