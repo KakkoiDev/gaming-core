@@ -67,7 +67,8 @@ module.exports=function(test){
   await page.getByRole('gridcell',{name:'Watering Can'}).click();
   await h.until(()=>tool===2&&document.getElementById('hud-tool').textContent==='Watering Can');
   // And the first press right on the d-pad only turns me, the second steps one tile
-  await h.padTap(15);await h.until(()=>player.face.x===1);
+  // (held only until the turn shows: a slow machine runs several world steps per input tick)
+  await h.ready();await h.pad('button',15,true);await h.until(()=>player.face.x===1);await h.pad('button',15,false);
   assert.equal((await at(h)).x,4,'a new direction only turns');
   await h.padTap(15);await h.until(()=>player.x===5);
   await h.pad('disconnect');
