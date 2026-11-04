@@ -36,3 +36,5 @@ are reference material, not a claim that every engine feature is integrated or
 tested. Gaming-core's own starter files live in `starters/` (MIT); the scaffolder
 copies them over the pinned upstream example. Optional Box2D uses WASM and is outside the default starter. No live Pi
 integration or weak-model benchmark is claimed.
+
+For familiar game mechanics, see the [classic game pattern catalog](docs/classic-patterns.md).

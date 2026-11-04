@@ -1,0 +1,138 @@
+[
+  {
+    "id": "paddle-duel",
+    "references": [
+      "Pong"
+    ],
+    "starter": "pong",
+    "first_edit": "Change the winning score; keep both paddles, ball and restart.",
+    "check": "Move both paddles, score, restart."
+  },
+  {
+    "id": "jump-platformer",
+    "references": [
+      "Super Mario Bros.",
+      "Sonic the Hedgehog"
+    ],
+    "starter": "platformer",
+    "first_edit": "Change one level map; keep spawn, checkpoint and goal.",
+    "check": "Jump, collect, reach checkpoint and finish."
+  },
+  {
+    "id": "brick-breaker",
+    "references": [
+      "Breakout",
+      "Arkanoid"
+    ],
+    "starter": "arcade",
+    "mode": "Bricks",
+    "first_edit": "Change the brick layout.",
+    "check": "Serve, break a brick, update score."
+  },
+  {
+    "id": "snake",
+    "references": [
+      "Snake"
+    ],
+    "starter": "arcade",
+    "mode": "Snake",
+    "first_edit": "Change speed or board size, one at a time.",
+    "check": "Turn, eat, grow, lose on collision, restart."
+  },
+  {
+    "id": "vertical-shooter",
+    "references": [
+      "Galaga",
+      "1942"
+    ],
+    "starter": "shooter",
+    "first_edit": "Change one wave; keep movement, fire and collisions.",
+    "check": "Move, shoot an enemy, score and restart."
+  },
+  {
+    "id": "crate-puzzle",
+    "references": [
+      "Sokoban"
+    ],
+    "starter": "puzzle",
+    "first_edit": "Add one level with a known solution.",
+    "check": "Push a crate onto a goal, undo, solve."
+  },
+  {
+    "id": "slingshot",
+    "references": [
+      "Angry Birds"
+    ],
+    "preview": "starters/slingshot/index.html",
+    "first_edit": "Move one target; preserve at least one reachable hit.",
+    "check": "Drag or Space, hit, score and restart."
+  },
+  {
+    "id": "maze-chase",
+    "references": [
+      "Pac-Man"
+    ],
+    "preview": "starters/maze-chase/index.html",
+    "check": "Collect a pellet and restart"
+  },
+  {
+    "id": "run-and-gun",
+    "references": [
+      "Metal Slug",
+      "Contra"
+    ],
+    "preview": "starters/run-and-gun/index.html",
+    "check": "Hit a patrol and restart"
+  },
+  {
+    "id": "formation-shooter",
+    "references": [
+      "Space Invaders"
+    ],
+    "needed": "Enemies march as a group, descend at edges, fire and lose on contact with the defense line."
+  },
+  {
+    "id": "falling-blocks",
+    "references": [
+      "Tetris"
+    ],
+    "needed": "Rotate and place pieces, clear rows, score, top out and restart."
+  },
+  {
+    "id": "one-button-flight",
+    "references": [
+      "Flappy Bird"
+    ],
+    "needed": "Flap, pass an obstacle, score, collide against the visible shape, restart."
+  },
+  {
+    "id": "top-down-adventure",
+    "references": [
+      "The Legend of Zelda"
+    ],
+    "needed": "Room traversal, attack, collectible key and locked exit."
+  },
+  {
+    "id": "one-on-one-fighter",
+    "references": [
+      "Street Fighter II"
+    ],
+    "needed": "Walk, attack, block, health, round win and rematch."
+  },
+  {
+    "id": "chess",
+    "references": [
+      "Chess"
+    ],
+    "preview": "starters/chess/index.html",
+    "check": "Legal and illegal moves, undo, checkmate and restart"
+  },
+  {
+    "id": "checkers",
+    "references": [
+      "Checkers",
+      "Draughts"
+    ],
+    "needed": "Choose a ruleset, enforce capture, chained jumps, kings and end conditions."
+  }
+]

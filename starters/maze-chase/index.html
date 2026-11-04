@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Lantern Maze</title>
+<style>body{font:16px system-ui;background:#142137;color:white;text-align:center}canvas{width:min(100%,480px);background:#0b1221}button{padding:.5rem}body{background:#15152b;color:#f9edcc}button{background:#f9edcc;color:#15152b;border:2px solid #15152b;box-shadow:2px 2px #f0a741;border-radius:0;font-weight:700}canvas{border:2px solid #f9edcc;border-radius:0}</style>
+<h1>Lantern Maze</h1><p>Use arrows to collect lights. Avoid the guard.</p>
+<canvas width="480" height="320" tabindex="0" aria-label="Maze field"></canvas>
+<p id="hud" role="status"></p><div><button>↑</button><button>←</button><button>↓</button><button>→</button><button id="restart">Restart</button></div>
+<script src="../../vendor/littlejs-ai/dist/littlejs.js"></script>
+<script>
+(()=>{
+const c=document.querySelector('canvas'), g=c.getContext('2d'), hud=document.querySelector('#hud');
+const map=['############','#P....#...G#','#.##..#.#..#','#....o..#..#','#.####.....#','#......##..#','#..........#','############'];
+const dirs={ArrowUp:[0,-1],ArrowDown:[0,1],ArrowLeft:[-1,0],ArrowRight:[1,0]}, arrows=['ArrowUp','ArrowLeft','ArrowDown','ArrowRight'];
+let cells,p,e,score,ticks,mode,power;
+function reset(){cells=map.map(r=>[...r]);p=[1,1];e=[10,1];score=ticks=power=0;mode='Play';paint()}
+function open(x,y){return cells[y]?.[x]!==undefined&&cells[y][x]!=='#'}
+function collision(){if(p[0]!==e[0]||p[1]!==e[1])return;if(power){score+=100;e=[10,1]}else mode='Caught'}
+function move(k){if(mode!=='Play'||!dirs[k])return;const [dx,dy]=dirs[k],x=p[0]+dx,y=p[1]+dy;if(!open(x,y))return;
+p=[x,y];const pellet=cells[y][x];if(pellet==='.'||pellet==='o'){cells[y][x]=' ';score+=10;if(pellet==='o')power=8}
+collision();if(mode==='Play'&&++ticks%2===0){const choices=Object.values(dirs).map(([a,b])=>[e[0]+a,e[1]+b]).filter(([a,b])=>open(a,b));choices.sort((a,b)=>(power?-1:1)*(distance(a)-distance(b)));e=choices[0]??e;collision()}
+if(power)power--;if(mode==='Play'&&!cells.some(r=>r.some(ch=>ch==='.'||ch==='o')))mode='Maze cleared';paint()}
+function distance(q){return Math.abs(q[0]-p[0])+Math.abs(q[1]-p[1])}
+function dot(x,y,r,color){g.fillStyle=color;g.beginPath();g.arc(x*40+20,y*40+20,r,0,Math.PI*2);g.fill()}
+function paint(){g.clearRect(0,0,480,320);cells.forEach((r,y)=>r.forEach((ch,x)=>{if(ch==='#'){g.fillStyle='#324b88';g.fillRect(x*40,y*40,39,39)}else if(ch==='.'||ch==='o')dot(x,y,ch==='o'?7:3,'#f7e5b3')}));dot(...p,13,'#ffc54a');dot(...e,13,power?'#80baff':'#ec6370');hud.textContent=mode+' · Score '+score}
+c.onkeydown=e=>{if(dirs[e.key]){e.preventDefault();move(e.key)}};document.querySelectorAll('button:not(#restart)').forEach((b,i)=>b.onclick=()=>move(arrows[i]));document.querySelector('#restart').onclick=reset;setHeadlessMode(true);engineInit(reset,()=>{},()=>{},()=>{},()=>{});
+})();
+</script></html>

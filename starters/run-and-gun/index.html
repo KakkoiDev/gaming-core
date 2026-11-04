@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Signal Run</title>
+<style>body{font:16px system-ui;background:#162837;color:white;text-align:center}canvas{width:min(100%,640px);background:#8db5cd}button{padding:.5rem;touch-action:none}body{background:#15152b;color:#f9edcc}button{background:#f9edcc;color:#15152b;border:2px solid #15152b;box-shadow:2px 2px #f0a741;border-radius:0;font-weight:700}canvas{border:2px solid #f9edcc;border-radius:0}</style>
+<h1>Signal Run</h1><p>Arrows to move, Up to jump, Space to fire. Reach the beacon.</p><canvas width="640" height="320" tabindex="0" aria-label="Run and gun field"></canvas><p id="hud" role="status"></p><button data-key="ArrowLeft">Left</button><button data-key="ArrowRight">Right</button><button data-key="ArrowUp">Jump</button><button data-key=" ">Fire</button><button id="restart">Restart</button>
+<script src="../../vendor/littlejs-ai/dist/littlejs.js"></script>
+<script>
+(()=>{
+const c=document.querySelector('canvas'),g=c.getContext('2d'),hud=document.querySelector('#hud'),keys=new Set();
+const floor=278, end=1510;let p,enemies,shots,score,mode,checkpoint,fire,hit;
+function reset(){p={x:55,y:floor-36,vy:0,dir:1,hp:3};enemies=[260,540,1000,1290].map(x=>({x,home:x,v:38}));shots=[];score=fire=hit=0;mode='Play';checkpoint=55;keys.clear();report()}
+function report(){const text=mode+' · Score '+score+' · Health '+p.hp;if(hud.textContent!==text)hud.textContent=text}
+function step(dt){if(mode!=='Play')return;fire-=dt;hit-=dt;
+const dir=Number(keys.has('ArrowRight'))-Number(keys.has('ArrowLeft'));if(dir){p.dir=dir;p.x=Math.max(0,Math.min(end,p.x+dir*190*dt))}
+if(keys.has('ArrowUp')&&p.y>=floor-36)p.vy=-390;p.vy+=900*dt;p.y=Math.min(floor-36,p.y+p.vy*dt);if(p.y===floor-36)p.vy=0;
+if(keys.has(' ')&&fire<=0){fire=.19;shots.push({x:p.x+13,y:p.y+16,v:p.dir*520})}
+for(const e of enemies){e.x+=e.v*dt;if(Math.abs(e.x-e.home)>55)e.v*=-1;if(hit<=0&&Math.abs(e.x-p.x)<24&&p.y+36>floor-28){p.hp--;hit=1;if(!p.hp)mode='Out of health';else{p.x=checkpoint;p.y=floor-36}}}
+for(const s of shots){s.x+=s.v*dt;const e=enemies.find(e=>!e.dead&&Math.abs(e.x-s.x)<15&&s.y>floor-30&&s.y<floor);if(e){e.dead=s.dead=true;score+=100}}
+enemies=enemies.filter(e=>!e.dead);shots=shots.filter(s=>!s.dead&&Math.abs(s.x-p.x)<740);
+if(p.x>=780)checkpoint=780;if(p.x>=end)mode='Beacon reached';report()}
+function draw(){const offset=Math.max(0,p.x-210);g.clearRect(0,0,640,320);g.save();g.translate(-offset,0);g.fillStyle='#395a45';g.fillRect(0,floor,2200,42);
+g.fillStyle='#f5c04b';g.fillRect(780,210,8,68);g.fillRect(end,190,12,88);
+g.fillStyle='#1c567c';g.fillRect(p.x,p.y,26,36);g.fillRect(p.x+13+p.dir*12,p.y+15,12,6);
+g.fillStyle='#943e50';for(const e of enemies)g.fillRect(e.x-12,floor-28,24,28);
+g.fillStyle='#fff2a1';for(const s of shots)g.fillRect(s.x,s.y,8,3);g.restore()}
+c.onkeydown=e=>{if(['ArrowLeft','ArrowRight','ArrowUp',' '].includes(e.key)){e.preventDefault();keys.add(e.key)}};window.addEventListener('keyup',e=>keys.delete(e.key));c.onblur=()=>keys.clear();
+document.querySelectorAll('[data-key]').forEach(b=>{b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);keys.add(b.dataset.key)};b.onpointerup=b.onpointercancel=b.onlostpointercapture=()=>keys.delete(b.dataset.key)});
+document.querySelector('#restart').onclick=reset;setHeadlessMode(true); engineInit(reset,()=>{step(1/60);draw()},()=>{},()=>{},()=>{});
+})();
+</script></html>
