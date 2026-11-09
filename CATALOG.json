@@ -2,6 +2,7 @@
   "schema_version": 1,
   "default_engine": "LittleJS-AI bundled LittleJS 1.27.0",
   "starters": [
+    {"id": "paperclip", "path": "starters/paperclip/index.html", "status": "Standalone incremental game; browser-tested", "engine": null},
     {"id": "slingshot", "path": "starters/slingshot/index.html", "status": "Playable preview on the pinned LittleJS loop", "recipe": "recipes/slingshot.md"},
     {
       "id": "input",

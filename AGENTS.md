@@ -9,7 +9,7 @@ Choose a genre starter (`tools/game.py genres`, [genres](recipes/genres/README.m
 emptyGame/pong with tools/game.py init into a fresh directory. Genre starters put every word,
 menu and number in HTML through the [game kit](recipes/game-kit.md), in English and Japanese. The
 scaffolder copies actual engine bytes and licenses. Edit the new game, never the
-vendor snapshot. Default engine is the AI snapshot 1.27.0: classic script globals,
+vendor snapshot. For a small native-button clicker, use the engine-free paperclip starter. Default engine is the AI snapshot 1.27.0: classic script globals,
 no ESM/LJS namespace. Read its reference before guessing API names. The separate
 1.27.2 engine snapshot is reference-only until deliberately adopted and tested.
 

@@ -11,12 +11,12 @@ OUT=${GAMING_CORE_E2E_OUT:-.test-output/e2e}
 J=$OUT/junit.xml
 echo "== scenarios"
 missing=0
-for dir in starters/emptyGame starters/pong starters/kit starters/genres/*/; do
+for dir in starters/emptyGame starters/pong starters/paperclip starters/kit starters/genres/*/; do
   dir=${dir%/}; [ -f "$dir/SCENARIOS.md" ] || { echo "NO  $dir/SCENARIOS.md is missing"; missing=1; }
 done
 [ $missing = 0 ]
 python3 $T/scenarios.py check starters/kit/SCENARIOS.md --tests tests/e2e/kit.cjs --junit "$J"
-for id in emptyGame pong; do
+for id in emptyGame pong paperclip; do
   python3 $T/scenarios.py check starters/$id/SCENARIOS.md --tests tests/e2e/$id.cjs --junit "$J"
 done
 for dir in starters/genres/*/; do

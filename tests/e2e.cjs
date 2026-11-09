@@ -2,7 +2,7 @@
 // one test each, named exactly after the scenario's title, played in a real browser.
 //
 //   node tests/e2e.cjs [target ...] [--grep <text>] [--workers <n>]
-//     targets: emptyGame, pong and every genre (tools/game.py genres); default: all of them
+//     targets: emptyGame, pong, paperclip and every genre (tools/game.py genres); default: all of them
 //     GAMING_CORE_CHROMIUM may point at a Chromium already on disk; GAMING_CORE_E2E_OUT moves .test-output/e2e
 //
 // Each target is scaffolded with tools/game.py into a temporary folder and served on 127.0.0.1. Each test gets a fresh
@@ -26,7 +26,7 @@ const args=process.argv.slice(2);
 const option=(name,fallback)=>{const i=args.indexOf(name);if(i<0)return fallback;const [,value]=args.splice(i,2);return value;};
 const grep=option('--grep',null),workers=Number(option('--workers',process.env.CI?2:3));
 const genres=JSON.parse(execFileSync('python3',['-B',path.join(root,'tools/game.py'),'genres'])).genres.map(g=>g.id);
-const all=['emptyGame','pong',...genres];
+const all=['emptyGame','pong','paperclip',...genres];
 const wanted=args.length?args:all;
 for(const id of wanted)if(!all.includes(id))throw Error(`unknown target ${id}: ${all.join(', ')}`);
 
@@ -134,7 +134,8 @@ const escapeXml=s=>String(s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&
     let failure=null;
     try{
      await page.goto(`http://127.0.0.1:${port}/${id}/`);
-     await page.waitForFunction(()=>typeof mainCanvas!=='undefined'&&mainCanvas.width>0&&time>0&&typeof gcInput!=='undefined'&&gcInput.tick>0&&
+     if(id==='paperclip') await page.getByRole('heading',{name:'Paperclip Factory'}).waitFor();
+     else await page.waitForFunction(()=>typeof mainCanvas!=='undefined'&&mainCanvas.width>0&&time>0&&typeof gcInput!=='undefined'&&gcInput.tick>0&&
       (typeof GAME_ID==='undefined'||!document.getElementById('ui')||document.querySelector('#ui > section:not([hidden])')),undefined,{timeout:60000});
      await fn(helpers(page,id));
      if(external.length)throw Error(`requests left 127.0.0.1: ${external.join(', ')}`);

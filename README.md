@@ -15,6 +15,7 @@ python3 -B tools/game.py catalog
 python3 -B tools/game.py init pong --out /absolute/fresh/game
 python3 -B tools/game.py genres
 python3 -B tools/game.py init rpg --out /absolute/fresh/rpg
+python3 -B tools/game.py init paperclip --out /absolute/fresh/paperclip
 python3 -B tools/check.py
 ```
 
@@ -29,6 +30,8 @@ position, prompts for the active device, fixed pause/back and saved rebinding. N
 model service or runtime build is needed for these two starters. Python 3.11+ is
 only scaffold/check tooling; browser gameplay is JavaScript. Original library
 recipes/adapters are MIT, upstream notices are retained.
+
+[Paperclip Factory](starters/paperclip/index.html) is a standalone clicker with native buttons and opt-in automation. It needs no canvas or engine.
 
 The full pinned LittleJS-AI toolkit and LittleJS source/examples are available
 locally. `CATALOG.json` indexes examples, templates and skills. Broader examples
