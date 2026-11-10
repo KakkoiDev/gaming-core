@@ -11,7 +11,7 @@ ROOT=Path(__file__).resolve().parents[1]
 STARTERS=ROOT/'starters'
 GENRES=STARTERS/'genres'
 KIT=STARTERS/'kit'
-PRESETS=['emptyGame','pong','paperclip']
+PRESETS=['emptyGame','pong','paperclip','universal-paperclips']
 
 
 def genres():
@@ -121,11 +121,11 @@ def init(preset,output):
     output.parent.mkdir(parents=True,exist_ok=True)
     stage=Path(tempfile.mkdtemp(prefix='.gaming-core-',dir=output.parent))
     try:
-        if preset == 'paperclip':
+        if preset in ('paperclip', 'universal-paperclips'):
             shutil.copyfile(STARTERS/preset/'index.html',stage/'index.html')
             shutil.copyfile(ROOT/'LICENSE',stage/'LICENSE-gaming-core.txt')
             provenance={'schema':'gaming-core.scaffold/1','preset':preset,'engine_version':None,
-                        'local_files':{'index.html':{'origin':'gaming-core starters/paperclip/index.html (MIT)','sha256':sha(stage/'index.html')}}}
+                        'local_files':{'index.html':{'origin':f'gaming-core starters/{preset}/index.html (MIT)','sha256':sha(stage/'index.html')}}}
             (stage/'gaming-core.json').write_text(json.dumps(provenance,indent=2)+'\n')
             if output.exists(): raise ValueError('Output created concurrently')
             stage.rename(output)

@@ -26,7 +26,7 @@ const args=process.argv.slice(2);
 const option=(name,fallback)=>{const i=args.indexOf(name);if(i<0)return fallback;const [,value]=args.splice(i,2);return value;};
 const grep=option('--grep',null),workers=Number(option('--workers',process.env.CI?2:3));
 const genres=JSON.parse(execFileSync('python3',['-B',path.join(root,'tools/game.py'),'genres'])).genres.map(g=>g.id);
-const all=['emptyGame','pong','paperclip',...genres];
+const all=['emptyGame','pong','paperclip','universal-paperclips',...genres];
 const wanted=args.length?args:all;
 for(const id of wanted)if(!all.includes(id))throw Error(`unknown target ${id}: ${all.join(', ')}`);
 
@@ -134,7 +134,8 @@ const escapeXml=s=>String(s).replace(/[<>&"]/g,c=>({'<':'&lt;','>':'&gt;','&':'&
     let failure=null;
     try{
      await page.goto(`http://127.0.0.1:${port}/${id}/`);
-     if(id==='paperclip') await page.getByRole('heading',{name:'Paperclip Factory'}).waitFor();
+     if(id==='universal-paperclips') await page.getByRole('heading',{name:'Paperclip Maximizer'}).waitFor();
+     else if(id==='paperclip') await page.getByRole('heading',{name:'Paperclip Factory'}).waitFor();
      else await page.waitForFunction(()=>typeof mainCanvas!=='undefined'&&mainCanvas.width>0&&time>0&&typeof gcInput!=='undefined'&&gcInput.tick>0&&
       (typeof GAME_ID==='undefined'||!document.getElementById('ui')||document.querySelector('#ui > section:not([hidden])')),undefined,{timeout:60000});
      await fn(helpers(page,id));

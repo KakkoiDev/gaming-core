@@ -31,6 +31,8 @@ model service or runtime build is needed for these two starters. Python 3.11+ is
 only scaffold/check tooling; browser gameplay is JavaScript. Original library
 recipes/adapters are MIT, upstream notices are retained.
 
+[Paperclip Maximizer](starters/universal-paperclips/index.html) is an original, compact Universal Paperclips-inspired game with market pricing, wire, AutoClippers, and projects that unlock industry and space. Scaffold it with `tools/game.py init universal-paperclips`.
+
 [Paperclip Factory](starters/paperclip/index.html) is a standalone clicker with native buttons and opt-in automation. It needs no canvas or engine.
 
 The full pinned LittleJS-AI toolkit and LittleJS source/examples are available
